@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on renauxv</title>
+    <link>http://localhost:33309/posts/</link>
+    <description>Recent content in Posts on renauxv</description>
+    <generator>Hugo -- 0.146.3</generator>
+    <language>fr-FR</language>
+    <copyright>Renaux Verdiere Theo</copyright>
+    <lastBuildDate>Tue, 10 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:33309/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Génération Augmentée de récupération (RAG)</title>
+      <link>http://localhost:33309/posts/rag_definition/</link>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:33309/posts/rag_definition/</guid>
+      <description>Les LLM comme ChatGPT sont puissants, mais limités. Les RAG (Retrieval-Augmented Generation) améliorent leurs réponses en leur fournissant des documents à la volée, sans ré-entraînement. L’article explore les variantes des RAG — naïf, avancé, modulaire — afin de palier aux principaux défauts des LLM modernes.</description>
+    </item>
+    <item>
+      <title>Quarto</title>
+      <link>http://localhost:33309/posts/quarto/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:33309/posts/quarto/</guid>
+      <description>&lt;p&gt;Dans le cadre d’un projet universitaire, nous étions invités à développer une version numérique du jeu de plateau &lt;em&gt;Quarto&lt;/em&gt;. Aux côtés de mon collègue &lt;a href=&#34;https://sagbot.com/&#34;&gt;E. HADDAG&lt;/a&gt;, nous avons ainsi tenté de concevoir l’implémentation la plus performante à notre portée de ce jeu. L&amp;rsquo;intégralité
+de ce projet a été réalisée en &lt;em&gt;C&lt;/em&gt; de l&amp;rsquo;interface à la mise en place du modèle.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fond Parallaxe</title>
+      <link>http://localhost:33309/posts/parallaxe_raylib/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:33309/posts/parallaxe_raylib/</guid>
+      <description>&lt;p&gt;Après avoir consulté
+l&amp;rsquo;&lt;a href=&#34;https://github.com/michenriksen/til-example-site/blob/main/content/posts/rich-content.md&#34;&gt;exemple&lt;/a&gt;
+dédié au &lt;strong&gt;défilement parallaxe&lt;/strong&gt; de la &lt;em&gt;Raylib&lt;/em&gt;, j&amp;rsquo;ai décidé de créer un module
+en &lt;strong&gt;C&lt;/strong&gt; pour rendre son implémentation plus propre et efficace (toujour à
+l&amp;rsquo;aide de la &lt;em&gt;Raylib&lt;/em&gt;),
+&lt;strong&gt;&lt;a href=&#34;https://github.com/titusse3/mbck&#34;&gt;lien vers le repertoire du module&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>test</title>
+      <link>http://localhost:33309/posts/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:33309/posts/test/</guid>
+      <description>&lt;p&gt;\(\sum x^i\)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

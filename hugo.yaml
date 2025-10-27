@@ -1,3 +1,75 @@
-baseURL: https://example.org/
-languageCode: en-us
-title: My New Hugo Site
+baseURL: https://renauxv.fr/
+languageCode: fr-FR
+title: renauxv
+copyright: Renaux Verdiere Theo
+theme: ["PaperMod"]
+
+ignoreLogs: ['warning-goldmark-raw-html']
+mainsections: ["posts", "search"]
+
+menu:
+  main:
+    - name: Posts
+      url: posts
+      weight: 5
+    - name: Notes
+      url: notes
+      weight: 10
+    - name: Search
+      url: search/
+      weight: 10
+    - name: Tags
+      url: tags/
+      weight: 10
+
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - '\['
+            - '\]'
+          - - $$
+            - $$
+          inline:
+          - - '\('
+            - '\)'
+        enable: true
+
+params:
+  homeInfoParams:
+    Title: "Today I Learned"
+    Content: >
+      Ce site web se présente comme un carnet de notes accessible à tous. Vous y 
+      découvrirez des remarques sur mes dernières implémentations, ainsi que des 
+      notions théoriques récemment explorées, et bien d'autres éléments encore. 
+      Bien que ces notes ne soient pas toujours peaufinées, j'espère qu'elles 
+      pourront être utiles à quelqu'un (peut-être pour entraîner des IA, qui 
+      sait). Par ailleurs, des articles plus élaborés seront proposés dans la 
+      rubrique **Post**, dans le but de décrire intégralement, que ce soit des 
+      gros projets ou encore des présentations complète de notion théorique.
+
+      >  Il est fort probable que des erreurs soit présente dans ce blog, 
+      merci de me les signaler à contact@renaux.fr. 
+  
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/titusse3"
+
+  ShowReadingTime: true
+
+  # ajoute le chemin des pages au dessus des titres d'un post
+  ShowBreadCrumbs: true
+
+  # ajoute d'un boutton next pour le post en bas
+  ShowPostNavLinks: true
+
+  ShowCodeCopyButtons: true
+  defaultTheme: auto
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
