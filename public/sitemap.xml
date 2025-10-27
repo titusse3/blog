@@ -2,83 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:33309/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/posts/rag_definition/</loc>
+    <loc>http://localhost:1313/posts/rag_definition/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/tags/ia/</loc>
+    <loc>http://localhost:1313/tags/ia/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/categories/intelligence-artificielle/</loc>
+    <loc>http://localhost:1313/categories/intelligence-artificielle/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/tags/llm/</loc>
+    <loc>http://localhost:1313/tags/llm/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/tags/rag/</loc>
+    <loc>http://localhost:1313/tags/rag/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/categories/c/</loc>
+    <loc>http://localhost:1313/categories/c/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/tags/c/</loc>
+    <loc>http://localhost:1313/tags/c/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/tags/optimisation/</loc>
+    <loc>http://localhost:1313/tags/optimisation/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/posts/quarto/</loc>
+    <loc>http://localhost:1313/posts/quarto/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/categories/raylib/</loc>
+    <loc>http://localhost:1313/categories/raylib/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/tags/raylib/</loc>
+    <loc>http://localhost:1313/tags/raylib/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/categories/calcule-formelle/</loc>
+    <loc>http://localhost:1313/categories/calcule-formelle/</loc>
     <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/categories/cryptographie/</loc>
+    <loc>http://localhost:1313/categories/cryptographie/</loc>
     <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/notes/lfsr/</loc>
+    <loc>http://localhost:1313/notes/lfsr/</loc>
     <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/notes/</loc>
+    <loc>http://localhost:1313/notes/</loc>
     <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/categories/s%C3%A9rie/</loc>
+    <loc>http://localhost:1313/categories/s%C3%A9rie/</loc>
     <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/notes/devellopement_serie/</loc>
+    <loc>http://localhost:1313/notes/devellopement_serie/</loc>
     <lastmod>2025-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/categories/informatique-quantique/</loc>
+    <loc>http://localhost:1313/categories/informatique-quantique/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/categories/mesure/</loc>
+    <loc>http://localhost:1313/categories/mesure/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/notes/mesure_quantique/</loc>
+    <loc>http://localhost:1313/notes/mesure_quantique/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/posts/parallaxe_raylib/</loc>
+    <loc>http://localhost:1313/posts/parallaxe_raylib/</loc>
     <lastmod>2025-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:33309/search/</loc>
-  </url><url>
-    <loc>http://localhost:33309/posts/test/</loc>
+    <loc>http://localhost:1313/search/</loc>
   </url>
 </urlset>
