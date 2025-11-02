@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Commande on renauxv</title>
+    <link>http://localhost:1313/tags/commande/</link>
+    <description>Recent content in Commande on renauxv</description>
+    <generator>Hugo -- 0.146.3</generator>
+    <language>fr-FR</language>
+    <copyright>Renaux Verdiere Theo</copyright>
+    <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/commande/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memo de commande linux</title>
+      <link>http://localhost:1313/notes/commande/</link>
+      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/commande/</guid>
+      <description>&lt;h2 id=&#34;changerment-de-la-version-de-java-utiliser&#34;&gt;Changerment de la version de java utiliser&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo update-alternatives --config java 
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

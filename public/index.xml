@@ -14,11 +14,16 @@
       <link>http://localhost:1313/posts/chest_recognition/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/chest_recognition/</guid>
-      <description>&lt;p&gt;Le jeu &lt;em&gt;Garry&amp;rsquo;s mod&lt;/em&gt;, est une sorte de platforme où l&amp;rsquo;on peut retrouver de nombreux mini-jeu. Cette article traite de la mise en place d&amp;rsquo;une extraction des ressources présentes dans d&amp;rsquo;image d&amp;rsquo;un coffre de ce jeu.
-Cet article expliquera en détail la mise en place de ce projet Python, disponible sur GitHub : &lt;a href=&#34;https://github.com/titusse3/chest-reco&#34;&gt;dépôt GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h1 id=&#34;description-du-problème&#34;&gt;Description du problème&lt;/h1&gt;
-&lt;p&gt;Dans le mini-jeu &lt;em&gt;Naruto RP&lt;/em&gt;, il existe des coffres, dans lequel on peut stocker des ressources. Ces ressources qui permettre de construire d&amp;rsquo;autre éléments.
-Il vient très vite le problème de savoir combien de ces éléments je peux créer avec mon coffre actuelle. Vue qu&amp;rsquo;aucune &lt;strong&gt;API&lt;/strong&gt; n&amp;rsquo;est disponible, j&amp;rsquo;ai donc décider de mettre en place une petite application d&amp;rsquo;extraction d&amp;rsquo;information de capture d&amp;rsquo;écran pris des coffres.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Le jeu &lt;strong&gt;Garry&amp;rsquo;s Mod&lt;/strong&gt; est une plateforme qui propose de nombreux &lt;em&gt;mini jeux&lt;/em&gt;.&lt;br&gt;
+Cet article présente la mise en place d’un système d’&lt;strong&gt;extraction&lt;br&gt;
+d’informations&lt;/strong&gt; à partir de plusieurs &lt;strong&gt;captures d’écran&lt;/strong&gt; d’un coffre du jeux &lt;em&gt;naruto RP&lt;/em&gt;, afin de connaître automatiquement le contenu de ce coffre.&lt;/p&gt;
+&lt;p&gt;Cet article expliquera en détail la mise en place de ce projet Python, disponible sur GitHub : &lt;a href=&#34;https://github.com/titusse3/chest-reco&#34;&gt;dépôt GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;-objectif-du-projet&#34;&gt;🧠 Objectif du projet&lt;/h2&gt;
+&lt;p&gt;L’objectif est d’automatiser l’analyse visuelle des coffres à l’aide d’un&lt;br&gt;
+script &lt;strong&gt;Python&lt;/strong&gt;. Ce projet met en œuvre des techniques de &lt;strong&gt;traitement&lt;br&gt;
+d’image&lt;/strong&gt; et d’&lt;strong&gt;extraction de texte&lt;/strong&gt;, tout en gardant à l’esprit la&lt;br&gt;
+nécessité de concevoir une solution &lt;strong&gt;légère et peu consommatrice en&lt;br&gt;
+ressources&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Génération Augmentée de récupération (RAG)</title>
@@ -68,6 +73,13 @@ dédié au &lt;strong&gt;défilement parallaxe&lt;/strong&gt; de la &lt;em&gt;Ra
 en &lt;strong&gt;C&lt;/strong&gt; pour rendre son implémentation plus propre et efficace (toujour à
 l&amp;rsquo;aide de la &lt;em&gt;Raylib&lt;/em&gt;),
 &lt;strong&gt;&lt;a href=&#34;https://github.com/titusse3/mbck&#34;&gt;lien vers le repertoire du module&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Memo de commande linux</title>
+      <link>http://localhost:1313/notes/commande/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/commande/</guid>
+      <description>&lt;p&gt;Mémo de commande très pratique.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

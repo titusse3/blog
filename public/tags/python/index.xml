@@ -10,11 +10,15 @@
     <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Extraction de Coffre</title>
+      <title>Extraction d&#39;information sur image (Chest-Reco)</title>
       <link>http://localhost:1313/posts/chest_recognition/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/chest_recognition/</guid>
-      <description></description>
+      <description>&lt;p&gt;Le jeu &lt;em&gt;Garry&amp;rsquo;s mod&lt;/em&gt;, est une sorte de platforme où l&amp;rsquo;on peut retrouver de nombreux mini-jeu. Cette article traite de la mise en place d&amp;rsquo;une extraction des ressources présentes dans d&amp;rsquo;image d&amp;rsquo;un coffre de ce jeu.
+Cet article expliquera en détail la mise en place de ce projet Python, disponible sur GitHub : &lt;a href=&#34;https://github.com/titusse3/chest-reco&#34;&gt;dépôt GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;description-du-problème&#34;&gt;Description du problème&lt;/h1&gt;
+&lt;p&gt;Dans le mini-jeu &lt;em&gt;Naruto RP&lt;/em&gt;, il existe des coffres, dans lequel on peut stocker des ressources. Ces ressources qui permettre de construire d&amp;rsquo;autre éléments.
+Il vient très vite le problème de savoir combien de ces éléments je peux créer avec mon coffre actuelle. Vue qu&amp;rsquo;aucune &lt;strong&gt;API&lt;/strong&gt; n&amp;rsquo;est disponible, j&amp;rsquo;ai donc décider de mettre en place une petite application d&amp;rsquo;extraction d&amp;rsquo;information de capture d&amp;rsquo;écran pris des coffres.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
