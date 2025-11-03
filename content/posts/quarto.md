@@ -319,9 +319,7 @@ seuls les algorithmes permettant de récupérer les pièces à comparer changent
 
 Tout d'abord, le fond du jeu utilise le module `mbck` présenté dans l'article 
 [*parallaxe_raylib*](/posts/parallaxe_raylib). Nous ne rentrerons pas dans les détails de 
-l'implémentation *Raylib*. Il s'agit du premier gros projet que nous mettons en 
-place avec celle-ci. De ce fait, le code a une qualité qui permet d'être 
-instructif. 
+l'implémentation *Raylib*. Il s'agit du premier gros projet que nous mettons en place avec celle-ci. De ce fait, le code a une qualité qui permet d'être instructif. 
 
 Cette partie sert à faire une démonstration des fonctionnalités du jeu. Une 
 image vaut mieux que mille mots, voici une vidéo qui démontre une partie des 
