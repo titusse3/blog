@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>LLM on renauxv</title>
-    <link>http://localhost:1313/tags/llm/</link>
+    <link>https://renauxv.fr/tags/llm/</link>
     <description>Recent content in LLM on renauxv</description>
     <generator>Hugo -- 0.146.3</generator>
     <language>fr-FR</language>
     <copyright>Renaux Verdiere Theo</copyright>
     <lastBuildDate>Tue, 10 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://renauxv.fr/tags/llm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Génération Augmentée de récupération (RAG)</title>
-      <link>http://localhost:1313/posts/rag_definition/</link>
+      <link>https://renauxv.fr/posts/rag_definition/</link>
       <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/rag_definition/</guid>
+      <guid>https://renauxv.fr/posts/rag_definition/</guid>
       <description>Les LLM comme ChatGPT sont puissants, mais limités. Les RAG (Retrieval-Augmented Generation) améliorent leurs réponses en leur fournissant des documents à la volée, sans ré-entraînement. L’article explore les variantes des RAG — naïf, avancé, modulaire — afin de palier aux principaux défauts des LLM modernes.</description>
     </item>
   </channel>

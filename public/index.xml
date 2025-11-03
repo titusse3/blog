@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>renauxv</title>
-    <link>http://localhost:1313/</link>
+    <link>https://renauxv.fr/</link>
     <description>Recent content on renauxv</description>
     <generator>Hugo -- 0.146.3</generator>
     <language>fr-FR</language>
     <copyright>Renaux Verdiere Theo</copyright>
     <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://renauxv.fr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Extraction d&#39;information sur image (Chest-Reco)</title>
-      <link>http://localhost:1313/posts/chest_recognition/</link>
+      <link>https://renauxv.fr/posts/chest_recognition/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/chest_recognition/</guid>
+      <guid>https://renauxv.fr/posts/chest_recognition/</guid>
       <description>&lt;p&gt;Le jeu &lt;strong&gt;Garry&amp;rsquo;s Mod&lt;/strong&gt; est une plateforme qui propose de nombreux &lt;em&gt;mini jeux&lt;/em&gt;.&lt;br&gt;
 Cet article présente la mise en place d’un système d’&lt;strong&gt;extraction  d’informations&lt;/strong&gt; à partir de plusieurs &lt;strong&gt;captures d’écran&lt;/strong&gt; d’un coffre du jeux &lt;em&gt;naruto RP&lt;/em&gt;, afin de connaître automatiquement le contenu de ce coffre.&lt;/p&gt;
 &lt;p&gt;Cet article expliquera en détail la mise en place de ce projet Python, disponible sur GitHub : &lt;a href=&#34;https://github.com/titusse3/chest-reco&#34;&gt;dépôt GitHub&lt;/a&gt;.&lt;/p&gt;
@@ -23,47 +23,47 @@ script &lt;em&gt;Python&lt;/em&gt;. Ce projet met en œuvre des techniques de &l
     </item>
     <item>
       <title>Génération Augmentée de récupération (RAG)</title>
-      <link>http://localhost:1313/posts/rag_definition/</link>
+      <link>https://renauxv.fr/posts/rag_definition/</link>
       <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/rag_definition/</guid>
+      <guid>https://renauxv.fr/posts/rag_definition/</guid>
       <description>Les LLM comme ChatGPT sont puissants, mais limités. Les RAG (Retrieval-Augmented Generation) améliorent leurs réponses en leur fournissant des documents à la volée, sans ré-entraînement. L’article explore les variantes des RAG — naïf, avancé, modulaire — afin de palier aux principaux défauts des LLM modernes.</description>
     </item>
     <item>
       <title>Quarto</title>
-      <link>http://localhost:1313/posts/quarto/</link>
+      <link>https://renauxv.fr/posts/quarto/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/quarto/</guid>
+      <guid>https://renauxv.fr/posts/quarto/</guid>
       <description>&lt;p&gt;Dans le cadre d’un projet universitaire, nous étions invités à développer une version numérique du jeu de plateau &lt;em&gt;Quarto&lt;/em&gt;. Aux côtés de mon collègue &lt;a href=&#34;https://sagbot.com/&#34;&gt;E. HADDAG&lt;/a&gt;, nous avons ainsi tenté de concevoir l’implémentation la plus performante à notre portée de ce jeu. L&amp;rsquo;intégralité
 de ce projet a été réalisée en &lt;em&gt;C&lt;/em&gt; de l&amp;rsquo;interface à la mise en place du modèle.&lt;/p&gt;</description>
     </item>
     <item>
       <title>LFSR pratique</title>
-      <link>http://localhost:1313/notes/lfsr/</link>
+      <link>https://renauxv.fr/notes/lfsr/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/lfsr/</guid>
+      <guid>https://renauxv.fr/notes/lfsr/</guid>
       <description>&lt;p&gt;Cette note offre une brève introduction aux &lt;em&gt;LFSR&lt;/em&gt;. Je me concentrerai sur les
 éléments essentiels pour en saisir le principe, sans entrer dans l&amp;rsquo;ensemble des
 détails théoriques.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Développement de série à la main</title>
-      <link>http://localhost:1313/notes/devellopement_serie/</link>
+      <link>https://renauxv.fr/notes/devellopement_serie/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/devellopement_serie/</guid>
+      <guid>https://renauxv.fr/notes/devellopement_serie/</guid>
       <description></description>
     </item>
     <item>
       <title>Mesure Quantique</title>
-      <link>http://localhost:1313/notes/mesure_quantique/</link>
+      <link>https://renauxv.fr/notes/mesure_quantique/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/mesure_quantique/</guid>
+      <guid>https://renauxv.fr/notes/mesure_quantique/</guid>
       <description></description>
     </item>
     <item>
       <title>Fond Parallaxe</title>
-      <link>http://localhost:1313/posts/parallaxe_raylib/</link>
+      <link>https://renauxv.fr/posts/parallaxe_raylib/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/parallaxe_raylib/</guid>
+      <guid>https://renauxv.fr/posts/parallaxe_raylib/</guid>
       <description>&lt;p&gt;Après avoir consulté
 l&amp;rsquo;&lt;a href=&#34;https://github.com/michenriksen/til-example-site/blob/main/content/posts/rich-content.md&#34;&gt;exemple&lt;/a&gt;
 dédié au &lt;strong&gt;défilement parallaxe&lt;/strong&gt; de la &lt;em&gt;Raylib&lt;/em&gt;, j&amp;rsquo;ai décidé de créer un module
@@ -73,9 +73,9 @@ l&amp;rsquo;aide de la &lt;em&gt;Raylib&lt;/em&gt;),
     </item>
     <item>
       <title>Memo de commande linux</title>
-      <link>http://localhost:1313/notes/commande/</link>
+      <link>https://renauxv.fr/notes/commande/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/commande/</guid>
+      <guid>https://renauxv.fr/notes/commande/</guid>
       <description>&lt;p&gt;Mémo de commande très pratique.&lt;/p&gt;</description>
     </item>
   </channel>

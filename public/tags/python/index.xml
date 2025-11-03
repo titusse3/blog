@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Python on renauxv</title>
-    <link>http://localhost:1313/tags/python/</link>
+    <link>https://renauxv.fr/tags/python/</link>
     <description>Recent content in Python on renauxv</description>
     <generator>Hugo -- 0.146.3</generator>
     <language>fr-FR</language>
     <copyright>Renaux Verdiere Theo</copyright>
     <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://renauxv.fr/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Extraction d&#39;information sur image (Chest-Reco)</title>
-      <link>http://localhost:1313/posts/chest_recognition/</link>
+      <link>https://renauxv.fr/posts/chest_recognition/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/chest_recognition/</guid>
+      <guid>https://renauxv.fr/posts/chest_recognition/</guid>
       <description>&lt;p&gt;Le jeu &lt;strong&gt;Garry&amp;rsquo;s Mod&lt;/strong&gt; est une plateforme qui propose de nombreux &lt;em&gt;mini jeux&lt;/em&gt;.&lt;br&gt;
 Cet article présente la mise en place d’un système d’&lt;strong&gt;extraction  d’informations&lt;/strong&gt; à partir de plusieurs &lt;strong&gt;captures d’écran&lt;/strong&gt; d’un coffre du jeux &lt;em&gt;naruto RP&lt;/em&gt;, afin de connaître automatiquement le contenu de ce coffre.&lt;/p&gt;
 &lt;p&gt;Cet article expliquera en détail la mise en place de ce projet Python, disponible sur GitHub : &lt;a href=&#34;https://github.com/titusse3/chest-reco&#34;&gt;dépôt GitHub&lt;/a&gt;.&lt;/p&gt;

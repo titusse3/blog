@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Fond Parallaxe | renauxv</title>
 <meta name="keywords" content="Raylib, C">
 <meta name="description" content="Après avoir consulté
@@ -14,16 +14,16 @@ en C pour rendre son implémentation plus propre et efficace (toujour à
 l&rsquo;aide de la Raylib),
 lien vers le repertoire du module.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/parallaxe_raylib/">
+<link rel="canonical" href="https://renauxv.fr/posts/parallaxe_raylib/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.579954d9aa9c58e0dc345e2e1d11231b738d9f08806b3af262235eeeda9dd040.css" integrity="sha256-V5lU2aqcWODcNF4uHREjG3ONnwiAazryYiNe7tqd0EA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/assets/favicon.ico">
-<link rel="apple-touch-icon" href="http://localhost:1313/assets/favicon.ico">
-<link rel="mask-icon" href="http://localhost:1313/assets/favicon.ico">
+<link rel="icon" href="https://renauxv.fr/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://renauxv.fr/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="https://renauxv.fr/assets/favicon.ico">
+<link rel="apple-touch-icon" href="https://renauxv.fr/assets/favicon.ico">
+<link rel="mask-icon" href="https://renauxv.fr/assets/favicon.ico">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/parallaxe_raylib/">
+<link rel="alternate" hreflang="en" href="https://renauxv.fr/posts/parallaxe_raylib/">
 <noscript>
     <style>
         #theme-toggle,
@@ -75,13 +75,82 @@ lien vers le repertoire du module.">
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://renauxv.fr/posts/parallaxe_raylib/">
+  <meta property="og:site_name" content="renauxv">
+  <meta property="og:title" content="Fond Parallaxe">
+  <meta property="og:description" content="Après avoir consulté l’exemple dédié au défilement parallaxe de la Raylib, j’ai décidé de créer un module en C pour rendre son implémentation plus propre et efficace (toujour à l’aide de la Raylib), lien vers le repertoire du module.">
+  <meta property="og:locale" content="fr-FR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-24T00:00:00+00:00">
+    <meta property="article:tag" content="Raylib">
+    <meta property="article:tag" content="C">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fond Parallaxe">
+<meta name="twitter:description" content="Après avoir consulté
+l&rsquo;exemple
+dédié au défilement parallaxe de la Raylib, j&rsquo;ai décidé de créer un module
+en C pour rendre son implémentation plus propre et efficace (toujour à
+l&rsquo;aide de la Raylib),
+lien vers le repertoire du module.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://renauxv.fr/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Fond Parallaxe",
+      "item": "https://renauxv.fr/posts/parallaxe_raylib/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Fond Parallaxe",
+  "name": "Fond Parallaxe",
+  "description": "Après avoir consulté l\u0026rsquo;exemple dédié au défilement parallaxe de la Raylib, j\u0026rsquo;ai décidé de créer un module en C pour rendre son implémentation plus propre et efficace (toujour à l\u0026rsquo;aide de la Raylib), lien vers le repertoire du module.\n",
+  "keywords": [
+    "Raylib", "C"
+  ],
+  "articleBody": "Après avoir consulté l’exemple dédié au défilement parallaxe de la Raylib, j’ai décidé de créer un module en C pour rendre son implémentation plus propre et efficace (toujour à l’aide de la Raylib), lien vers le repertoire du module.\nPrincipe d’un fond parallaxe Le concept de fond en parallaxe consiste à faire défiler des images selon un décalage différent. Autrement dit, deux couches – le background et le foreground – sont décalées à des vitesses variées pour créer une illusion de profondeur et de mouvement continu. Une image vaut mieux que mille mots (un gif dans ce cas) :\nExemple tiré de Wikipédia\nPrincipe d’Implémentation Contrairement à ce que j’imaginais, il n’est pas nécessaire d’utiliser une seule image de très grande taille pour obtenir cet effet. En réalité, répéter plusieurs fois la même image permet de créer l’illusion d’un fond continu.\nFond simple Pour mettre en place ce mécanisme, on dispose de deux copies de notre fond, placées côte à côte. Comme on peut le voir dans l’animation ci-dessous, la première copie présente un bord vert tandis que la seconde affiche un bord violet. Le rectangle bleu représente l’écran de l’utilisateur (celui qui observe notre fond parallax). On déplace ensuite les deux images de gauche à droite et, dès que le bord droit de la seconde image est atteint, le décalage est réinitialisé.\nL’image de fond utilisée est celle de Edermunizz\nJe me suis permis de qualifier cette version de fond simple, car l’image utilisée se prolonge continuellement vers la droite. En effet, le motif obtenu en plaçant côte à côte la même image est continu, ce qui facilite son implémentation. Cependant, ce type de fond n’est pas le plus courant ; il était donc nécessaire de prévoir une version alternative capable d’utilisé des images ne possédant pas cette propriété.\nFond difficile Comme expliqué précédemment, certaines images, comme celle-ci, ne se prêtent pas à une simple répétition.\nMagnifique croquis de Mayotte, réalisé par moi-même\nPour remédier à ce problème, l’idée consiste à effectuer une rotation horizontale de la seconde image. Ce flip permet de créer une continuité dans le motif.\nOn pourrait alors penser qu’il suffirait d’appliquer la méthode décrite dans la section précédente pour animer le fond. Cependant, cela ne fonctionne pas : il manque une partie du motif, ce qui engendre une sensation de téléportation lors du décalage. Pour mieux illustrer ce problème, observons une version montrant le mouvement complet du fond.\nÀ l’aide de cette image, identifiez la zone problématique de notre première implémentation. Il s’agit de la zone de transition entre la deuxième et la troisième image, mise en évidence par la teinte violette sur l’image ci-dessous.\nEn effet, en appliquant l’implémentation précédente, la réinitialisation des deux images provequera un effet de téléportation visuelle de notre fond. Si vous n’êtes toujours pas convaincu, voici un gif illustrant notre implémentation précédente.\nOn constate explicitement, à l’écran de l’utilisateur (représenté par le rectangle bleu), l’île n’est jamais affichée dans son intégralité. Une transition brutale se produit, où le début de l’île apparaît subitement à droite, remplaçant la partie gauche.\nPour résoudre ce problème, ajouter seulement une troisième image. Cette troisième image permet de revenir au premier cas, où l’image de départ est identique à celle utilisée lors de la réinitialisation. Pour s’en mettre d’accord, il suffit de regarder l’image ci-dessus qui représenter un mouvement complet de notre motif.\nPar ailleurs, dans les deux exemples présentés — que ce soit avec l’utilisation d’une image simple ou d’une image plus difficile — j’ai opté pour un mouvement de gauche à droite, bien que l’inverse aurait également pu être envisagé. Le module offre ainsi la possibilité de personnaliser les paramètres de flip si nécéssaire ainsi que la direction du mouvement.\nMise en place du module Comme dans tout module C bien conçu, une seule structure, mbck_t (moving background type), est exposée à l’utilisateur. Celle-ci regroupe toutes les informations nécessaires à la configuration et à l’affichage du fond, à savoir la largeur et la hauteur de la fenêtre ainsi que le vers l’image de fond.\nL’élément central de ce module est la fonction mbck_physics_process, qui doit être appelée à chaque frame. En effet, elle se charge simultanément d’afficher le fond et de l’animer. Dans cette fonction, l’affichage des textures est réalisé (deux pour une image simple, trois dans le cas contraire) en appliquant un offset correspondant au mouvement.\nPour mettre en place ce mouvement, un compteur nommé scroll_b est intégré à la structure. Ce compteur représente le décalage des images par rapport à l’écran de l’utilisateur et est modifié par le paramètre delta passé à mbck_physics_process. Si delta est négatif, le fond se déplace de droite à gauche (l’offset est décrémenté), tandis que pour une valeur positive, le mouvement est inversé.\nEnfin, comme illustré dans les exemples précédents, la remise à zéro du fond intervient lorsque le décalage fait disparaître la première (ou la seconde, selon le sens du mouvement) image de la fenêtre.\nConclusion Grâce à ce module simple, en combinant plusieurs instances de la structure mbck_t, il est possible de créer des animations de fond d’une grande qualité. De plus, une multitude d’images destinées à ce type de fond sont disponibles sur des sites comme itch.io. Par exemple, j’ai pu y trouver des layers qui composent le fond présenté en exemple dans ce module :\nAuteur des Layers utilisé CraftPix\n",
+  "wordCount" : "890",
+  "inLanguage": "en",
+  "datePublished": "2025-02-24T00:00:00Z",
+  "dateModified": "2025-02-24T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://renauxv.fr/posts/parallaxe_raylib/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "renauxv",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://renauxv.fr/assets/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="renauxv (Alt + H)">renauxv</a>
+            <a href="https://renauxv.fr/" accesskey="h" title="renauxv (Alt + H)">renauxv</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -107,22 +176,22 @@ lien vers le repertoire du module.">
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/posts" title="Posts">
+                <a href="https://renauxv.fr/posts" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/notes" title="Notes">
+                <a href="https://renauxv.fr/notes" title="Notes">
                     <span>Notes</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://renauxv.fr/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/tags/" title="Tags">
+                <a href="https://renauxv.fr/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -133,7 +202,7 @@ lien vers le repertoire du module.">
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://renauxv.fr/">Home</a>&nbsp;»&nbsp;<a href="https://renauxv.fr/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Fond Parallaxe
     </h1>
@@ -247,11 +316,11 @@ module :</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/raylib/">Raylib</a></li>
-      <li><a href="http://localhost:1313/tags/c/">C</a></li>
+      <li><a href="https://renauxv.fr/tags/raylib/">Raylib</a></li>
+      <li><a href="https://renauxv.fr/tags/c/">C</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/quarto/">
+  <a class="prev" href="https://renauxv.fr/posts/quarto/">
     <span class="title">« Prev</span>
     <br>
     <span>Quarto</span>

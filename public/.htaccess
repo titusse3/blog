@@ -1,0 +1,12 @@
+# Spécifie la page d'erreur personnalisée pour les erreurs 404
+ErrorDocument 404 /404.html
+
+# Active le moteur de réécriture d'URL
+RewriteEngine On
+
+# Si le fichier ou le répertoire demandé n'existe pas
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirige vers la page 404 en renvoyant le statut HTTP 404
+RewriteRule . /404.html [L,R=404]
