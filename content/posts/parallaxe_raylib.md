@@ -3,7 +3,6 @@ title: "Fond Parallaxe"
 date: "2025-02-24"
 tags: [Raylib, C]
 series : ["Themes Guide"]
-ShowToc: true
 ---
 
 Après avoir consulté 

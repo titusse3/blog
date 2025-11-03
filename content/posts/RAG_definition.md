@@ -11,7 +11,7 @@ summary: "Les LLM comme ChatGPT sont puissants, mais limités. Les RAG (Retrieva
 Les **grands modèles de langues (LLM)** sont très probablement la technologie la plus utilisée de ces cinq dernières années. Introduit au public par son représentant le plus connu [ChatGPT](https://openai.com/index/chatgpt/) en 2022.
 Ils sont devenus des outils presque indispensables pour certains.
 
-Bien que ces outils soient très impressionnants, ils admettent encore de nombreux défauts. L'**hallucination**, la **Cut-off Date**, date de fin d'entrainement du modèle. Ce qui implique que les informations postérieures à l'entrainement ne seront pas accessibles par le modèle.
+Bien que ces outils soient très impressionnants, ils admettent encore de nombreux défauts. L'**hallucination**, la **{{< sidenote "Cut-off Date" >}}, date de fin d'entrainement du modèle. Ce qui implique que les informations postérieures à l'entrainement ne seront pas accessibles par le modèle{{< /sidenote >}}**.
 
 # Génération augmentée de récupération (RAG)
 

@@ -52,9 +52,9 @@ $$
 où \(\mathcal{B}(E_\lambda)\) représente la base de l'espace \(E_\lambda\).
 Les **projecteurs** ainsi définis correspondent aux opérateurs que l'on applique 
 sur le *qubit* à mesurer.
-
-> Les **projecteurs** \(P\) respecte la propriété \(P^2 = P\).
-
+{{< admonition >}}
+Les **projecteurs** \(P\) respecte la propriété \(P^2 = P\).
+{{< /admonition >}}
 3. **Opération de mesure.**<br>
 Il est maintenant temps d'appliquer notre mesure sur une fonction d'onde que l'on 
 appellera \(\ket{\psi}\). Avant de procéder à cette opération, il est essentiel 
@@ -86,7 +86,9 @@ $$
 \dfrac{\bra{\psi} P_{\lambda_i} \ket{\psi}}{\bra{\psi} \ket{\psi}}
 $$
 
-> Dans le cas où \(\ket{\psi}\) est **normalisé**, \(\bra{\psi} \ket{\psi} = 1\).
+{{< admonition >}}
+Dans le cas où \(\ket{\psi}\) est **normalisé**, \(\bra{\psi} \ket{\psi} = 1\).
+{{< /admonition >}}
 
 En suivant ces étapes, vous pourrez réaliser la mesure. Le seul détail que j'ai 
 omis est que, après l'application du **projecteur**, une information est 

@@ -6,7 +6,8 @@ math: true
 ---
 
 Cette note offre une brève introduction aux *LFSR*. Je me concentrerai sur les 
-éléments essentiels pour en saisir le principe, sans entrer dans l'ensemble des détails théoriques.
+éléments essentiels pour en saisir le principe, sans entrer dans l'ensemble des 
+détails théoriques.
 
 <!--more-->
 
@@ -129,7 +130,10 @@ La période de la suite, notée \(\lambda\), est alors donnée par
 \lambda = n_1 - n.
 \]
 
-> On ne prend pas en compte \(e_0\), le nombre généré par les valeurs initiales du *LFSR* avant toute opération.
+{{< admonition >}}
+On ne prend pas en compte \(e_0\), le nombre généré par les valeurs initiales 
+du *LFSR* avant toute opération.
+{{< /admonition >}}
 
 Essayer de trouver la période associée au *LFSR* défini par la suite \(s_n\) :
 
@@ -251,10 +255,13 @@ c_ls_0 + c_{l-1}s_1 + \cdots + c_1s_{l - 1}
 On retrouve ainsi le décalage qui fait disparaître \(s_0\) et le calcul de 
 \(s_l\) s'effectue par une combinaison linéaire des \(c_i\).
 
-> On peut remarquer que, pour calculer les \(e_i\) utilisés pour déterminer la période, il suffit de poser :
+{{< admonition >}}
+On peut remarquer que, pour calculer les \(e_i\) utilisés pour déterminer la 
+période, il suffit de poser :
 \[
 e_0 = S, \; e_n = M\times e_{n - 1}.
 \]
+{{< /admonition >}}
 
 ### Périodicité
 
@@ -262,7 +269,10 @@ On dit qu'une suite est **périodique** si et seulement si \(\mu = 0\). Dans le
 cas d'un *LFSR*, cela équivaut à dire que \(c_l \neq 0\), où \(l\) représente 
 le nombre de valeurs de notre boîte à œufs.
 
-> Cette proposition se démontre à l'aide de la représentation matricielle des  *LFSR*, mais cette démonstration dépasse le cadre de cette note.
+{{< admonition >}}
+Cette proposition se démontre à l'aide de la représentation matricielle des 
+*LFSR*, mais cette démonstration dépasse le cadre de cette note.
+{{< /admonition >}}
 
 ## Représentation sous forme de polynôme
 
@@ -278,7 +288,10 @@ On définit le **polynôme de rétroaction** d'un *LFSR* de la manière suivante
   P(X) = 1 - \sum_{i = 1}^l c_i x^i
 \]
 
-> Puisque l'on travaille dans \(\mathbb{F}_2\), l'opération de soustraction (-)  est en réalité équivalente à l'addition (+).
+{{< admonition >}}
+Puisque l'on travaille dans \(\mathbb{F}_2\), l'opération de soustraction (-) 
+est en réalité équivalente à l'addition (+).
+{{< /admonition >}}
 
 ### Série génératrice ordinaire
 
@@ -289,7 +302,10 @@ est définie par :
   S(X) = \sum_{n \geq 0} s_n x^n
 \]
 
-> Petit rappel sur les séries : \(S\) est **inversible** si et seulement si \(s_0 = 0\).
+{{< admonition >}}
+Petit rappel sur les séries : \(S\) est **inversible** si et seulement si 
+\(s_0 = 0\).
+{{< /admonition >}}
 
 Nous disposons des deux propriétés suivantes concernant \(s_n\) :
 

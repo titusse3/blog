@@ -5,7 +5,6 @@ tags: [Raylib, C, Optimisation]
 categories: [Raylib, C]
 series : ["Themes Guide"]
 math: true
-ShowToc: true
 ---
 
 Dans le cadre d’un projet universitaire, nous étions invités à développer une version numérique du jeu de plateau *Quarto*. Aux côtés de mon collègue [E. HADDAG](https://sagbot.com/), nous avons ainsi tenté de concevoir l’implémentation la plus performante à notre portée de ce jeu. L'intégralité 
@@ -105,8 +104,8 @@ Tout le code associé à l'implémentation de la logique du jeu (et en aucun cas
 ## Représentation d'une partie de jeu
 
 L'objectif de cette implémentation est d'être performante quant à son 
-d'utilisation mémoires."
-Cette contrainte est due à l'objectif d'utiliser cette implémentation par des algorithmes d'optimisation et de prise de décision dans un jeu. (MinMax, NégaMax ...).
+{{< sidenote "d'utilisation mémoires." >}}
+Cette contrainte est due à l'objectif d'utiliser cette implémentation par des algorithmes d'optimisation et de prise de décision dans un jeu. (MinMax, NégaMax ...) {{< /sidenote >}}.
 
 ### Les pièces
 
@@ -215,18 +214,20 @@ l'animation ci-dessous.
 
 ![*Gif* d'exemple de shift de façon récuprer une valeur à un certain indice](https://i.imgur.com/NpIoUUf.gif)
 
-Pour rappel, les décalage en *C* se font dans les deux sens par les opérateurs suivants :
+Pour rappel, les 
+{{< sidenote "décalage" >}} 
+ Selon la norme 
+ <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3088.pdf">
+  <i>C23</i>
+ </a>, les bits ajoutés que ce soit à gauche ou à droite sont des zéros (outre
+ le cas où le décalage est plus grand que la longueur du mot binaire)
+{{< /sidenote >}}
+en *C* se font dans les deux sens par les opérateurs suivants :
 
 | Opérteur  | Descriptions                  |
 | ---------- | ---------------------------------------------- |
 | ``a >> b`` | Décale les bits de `a` de `b` case vers la droite. |
 | ``a << b`` | Décale les bits de `a` de `b` case vers la gauche. |
-
-Selon la norme 
- <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3088.pdf">
-  <i>C23</i>
- </a>, les bits ajoutés que ce soit à gauche ou à droite sont des zéros (outre
-  le cas où le décalage est plus grand que la longueur du mot binaire)
 
 ## Écriture des informations
 
@@ -250,10 +251,12 @@ typedef enum {
 } position_t;
 ```
 
+{{< admonition type="note" >}}
 Les notations ``0b`` ainsi que les caractères ``'`` dans la notation. Les 
 binaires sont tous deux issus de la *C23*. La première permet d'écrire la valeur
 au format binaire. La seconde correspond simplement à un séparateur améliorant
 la lisibilité.
+{{< /admonition >}}
 
 L'objectif étant de mettre en place une écriture/lecture d'une position du 
 plateau de manière très rapide. Pour ce faire, on représente les positions 
@@ -288,9 +291,14 @@ Pour ce faire, on suppose que les quatre pièces que l'on souhaite tester sont
 accumulateur a donc la description suivante :
 
 ![Description de l'accumulateur.](https://i.imgur.com/kHRrICg.png)
-*Exemple et description de l'accumulateur. Ici, les propriétés communes sont la taille et la forme.*
+*Exemple et description de l'accumulateur. Ici, les propriétés communes sont la 
+taille et la forme.*
 
-Maintenant, pour calculer les points communs entre deux pièces, il faut obtenir les bits correspondant aux mêmes caractéristiques. On ne peut pas simplement utiliser un et logique, par exemple, si nos deux pièces sont jaunes, leur premier bit vaut toutes deux 0. Or, avec le et logique, nous aurions 0. Nous avons donc besoin d'un opérateur aillant pour la table de vérité :
+Maintenant, pour calculer les points communs entre deux pièces, il faut obtenir
+les bits correspondant aux mêmes caractéristiques. On ne peut pas simplement
+utiliser un et logique, par exemple, si nos deux pièces sont jaunes, leur
+premier bit vaut toutes deux 0. Or, avec le et logique, nous aurions 0. Nous
+avons donc besoin d'un opérateur aillant pour la table de vérité :
 
 | a | b | Résultat |
 | - | - | -------- |
@@ -299,20 +307,29 @@ Maintenant, pour calculer les points communs entre deux pièces, il faut obtenir
 | 1 | 0 | 0    |
 | 1 | 1 | 1    |
 
-Par ailleurs, on peut implémenter cette table par la formule `~(a ^ b)` (il s'agit de l'inverse d'un *ou exclusif*) en *C*. Il nous suffira alors d'effectuer un et logique entre cette valeur et la valeur actuelle de notre accumulateur.
+Par ailleurs, on peut implémenter cette table par la formule `~(a ^ b)` (il 
+s'agit de l'inverse d'un *ou exclusif*) en *C*. Il nous suffira alors 
+d'effectuer un et logique entre cette valeur et la valeur actuelle de notre 
+accumulateur.
 
 À la fin de ces calculs, il nous suffit de regarder la valeur de l'accumulateur.
 S'il vaut 0, il n'y a donc aucun point commun, sinon la partie est gagnée.
 
-Comme évoqué précédemment, toutes les fonctions de tests utilisent ce procédé, seuls les algorithmes permettant de récupérer les pièces à comparer changent.
+Comme évoqué précédemment, toutes les fonctions de tests utilisent ce procédé, 
+seuls les algorithmes permettant de récupérer les pièces à comparer changent.
 
 # Interface
 
-Tout d'abord, le fond du jeu utilise le module `mbck` présenté dans l'article [*parallaxe_raylib*](/posts/parallaxe_raylib). Nous ne rentrerons pas dans les détails de l'implémentation *Raylib*. Il s'agit du premier gros projet que nous mettons en place avec celle-ci. De ce fait, le code a une qualité qui permet d'être instructif. 
+Tout d'abord, le fond du jeu utilise le module `mbck` présenté dans l'article 
+{{< backlink "parallaxe_raylib" >}}. Nous ne rentrerons pas dans les détails de 
+l'implémentation *Raylib*. Il s'agit du premier gros projet que nous mettons en 
+place avec celle-ci. De ce fait, le code a une qualité qui permet d'être 
+instructif. 
 
 Cette partie sert à faire une démonstration des fonctionnalités du jeu. Une 
 image vaut mieux que mille mots, voici une vidéo qui démontre une partie des 
-fonctionnalités disponibles. Si vous avez des retours sur ce jeu, merci de nous contacter.
+fonctionnalités disponibles. Si vous avez des retours sur ce jeu, merci de nous 
+contacter.
 
 <blockquote class="imgur-embed-pub" lang="en" data-id="1Hixjsh">
  <a href="https://imgur.com/1Hixjsh">View post on imgur.com</a>
