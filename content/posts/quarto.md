@@ -288,14 +288,9 @@ Pour ce faire, on suppose que les quatre pièces que l'on souhaite tester sont
 accumulateur a donc la description suivante :
 
 ![Description de l'accumulateur.](https://i.imgur.com/kHRrICg.png)
-*Exemple et description de l'accumulateur. Ici, les propriétés communes sont la 
-taille et la forme.*
+*Exemple et description de l'accumulateur. Ici, les propriétés communes sont la taille et la forme.*
 
-Maintenant, pour calculer les points communs entre deux pièces, il faut obtenir
-les bits correspondant aux mêmes caractéristiques. On ne peut pas simplement
-utiliser un et logique, par exemple, si nos deux pièces sont jaunes, leur
-premier bit vaut toutes deux 0. Or, avec le et logique, nous aurions 0. Nous
-avons donc besoin d'un opérateur aillant pour la table de vérité :
+Maintenant, pour calculer les points communs entre deux pièces, il faut obtenir les bits correspondant aux mêmes caractéristiques. On ne peut pas simplement utiliser un et logique, par exemple, si nos deux pièces sont jaunes, leur premier bit vaut toutes deux 0. Or, avec le et logique, nous aurions 0. Nous avons donc besoin d'un opérateur aillant pour la table de vérité :
 
 | a | b | Résultat |
 | - | - | -------- |
@@ -304,27 +299,20 @@ avons donc besoin d'un opérateur aillant pour la table de vérité :
 | 1 | 0 | 0    |
 | 1 | 1 | 1    |
 
-Par ailleurs, on peut implémenter cette table par la formule `~(a ^ b)` (il 
-s'agit de l'inverse d'un *ou exclusif*) en *C*. Il nous suffira alors 
-d'effectuer un et logique entre cette valeur et la valeur actuelle de notre 
-accumulateur.
+Par ailleurs, on peut implémenter cette table par la formule `~(a ^ b)` (il s'agit de l'inverse d'un *ou exclusif*) en *C*. Il nous suffira alors d'effectuer un et logique entre cette valeur et la valeur actuelle de notre accumulateur.
 
 À la fin de ces calculs, il nous suffit de regarder la valeur de l'accumulateur.
 S'il vaut 0, il n'y a donc aucun point commun, sinon la partie est gagnée.
 
-Comme évoqué précédemment, toutes les fonctions de tests utilisent ce procédé, 
-seuls les algorithmes permettant de récupérer les pièces à comparer changent.
+Comme évoqué précédemment, toutes les fonctions de tests utilisent ce procédé, seuls les algorithmes permettant de récupérer les pièces à comparer changent.
 
 # Interface
 
-Tout d'abord, le fond du jeu utilise le module `mbck` présenté dans l'article 
-[*parallaxe_raylib*](/posts/parallaxe_raylib). Nous ne rentrerons pas dans les détails de 
-l'implémentation *Raylib*. Il s'agit du premier gros projet que nous mettons en place avec celle-ci. De ce fait, le code a une qualité qui permet d'être instructif. 
+Tout d'abord, le fond du jeu utilise le module `mbck` présenté dans l'article [*parallaxe_raylib*](/posts/parallaxe_raylib). Nous ne rentrerons pas dans les détails de l'implémentation *Raylib*. Il s'agit du premier gros projet que nous mettons en place avec celle-ci. De ce fait, le code a une qualité qui permet d'être instructif. 
 
 Cette partie sert à faire une démonstration des fonctionnalités du jeu. Une 
 image vaut mieux que mille mots, voici une vidéo qui démontre une partie des 
-fonctionnalités disponibles. Si vous avez des retours sur ce jeu, merci de nous 
-contacter.
+fonctionnalités disponibles. Si vous avez des retours sur ce jeu, merci de nous contacter.
 
 <blockquote class="imgur-embed-pub" lang="en" data-id="1Hixjsh">
  <a href="https://imgur.com/1Hixjsh">View post on imgur.com</a>

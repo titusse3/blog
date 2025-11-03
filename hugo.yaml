@@ -56,6 +56,14 @@ params:
     - name: "github"
       url: "https://github.com/titusse3"
 
+  assets:
+    disableHLJS: true
+    favicon: "/assets/favicon.ico"
+    favicon16x16: "/assets/favicon.ico"
+    favicon32x32: "/assets/favicon.ico"
+    apple_touch_icon: "/assets/favicon.ico"
+    safari_pinned_tab: "/assets/favicon.ico"
+
   ShowReadingTime: true
 
   # ajoute le chemin des pages au dessus des titres d'un post
