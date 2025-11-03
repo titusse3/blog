@@ -28,3 +28,9 @@ ob hoogle # lance une doc hoogle du projet
 ss -tnlp # liste tous les ports écoutés par la machine
 ip addr # affiche les interfaces réseau
 ```
+
+## GPG
+
+```
+gpg --list-key # liste des clés
+```

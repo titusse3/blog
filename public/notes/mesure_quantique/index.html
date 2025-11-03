@@ -155,7 +155,7 @@ Une fois que nous avons établi cette propriété, l&rsquo;opérateur \(\mathcal
 qualifié d&rsquo;<strong>observable</strong>. Pour effectuer une mesure, il convient alors de
 suivre les étapes suivantes :</p>
 <ol>
-<li><strong>Déterminer les valeurs et vecteurs propres de l&rsquo;observable.</strong><!-- raw HTML omitted -->
+<li><strong>Déterminer les valeurs et vecteurs propres de l&rsquo;observable.</strong><br>
 Pour rappels si :
 $$
 \mathcal{O}\ket{\phi} = \lambda\ket{\phi}\\
@@ -175,7 +175,7 @@ E_\lambda = Vect\{\ket{\phi_0}, \cdots, \ket{\phi_n}\}
 $$
 où les \(\ket{\phi_i}\) sont les <strong>vecteurs propres</strong> correspondant à la
 <strong>valeur propre</strong> \(\lambda\).</li>
-<li><strong>Définir les projecteurs associés.</strong><!-- raw HTML omitted -->
+<li><strong>Définir les projecteurs associés.</strong><br>
 On définit le projecteur \(P_\lambda\) par :
 $$
 P_\lambda = 
@@ -188,13 +188,13 @@ sur le <em>qubit</em> à mesurer.</li>
 <blockquote>
 <p>Les <strong>projecteurs</strong> \(P\) respecte la propriété \(P^2 = P\).</p></blockquote>
 <ol start="3">
-<li><strong>Opération de mesure.</strong><!-- raw HTML omitted -->
+<li><strong>Opération de mesure.</strong><br>
 Il est maintenant temps d&rsquo;appliquer notre mesure sur une fonction d&rsquo;onde que l&rsquo;on
 appellera \(\ket{\psi}\). Avant de procéder à cette opération, il est essentiel
-de bien comprendre son principe. <!-- raw HTML omitted -->
+de bien comprendre son principe. <br>
 Nous partons d&rsquo;une fonction d&rsquo;onde \(\ket{\psi}\), qui est un vecteur dans un
 espace \(A\). Appliquer une mesure sur \(\ket{\psi}\) revient à projeter ce
-vecteur dans un nouvel espace.<!-- raw HTML omitted -->
+vecteur dans un nouvel espace.<br>
 L&rsquo;espace vers lequel \(\ket{\psi}\) sera projetée est l&rsquo;un des \(E_\lambda\),
 avec une probabilité déterminée.
 Pour réaliser ce changement de base, il suffit d&rsquo;utiliser les <strong>projecteurs</strong>
@@ -210,7 +210,7 @@ mesure doit être modifié, comme illustré ci-dessous :
 <img alt="Arbre complet de la mesure" loading="lazy" src="https://i.imgur.com/CU3VJNR.png"></p>
 <p>Grâce à cette multiplication par l&rsquo;inverse de la probabilité, notée
 \(\mathbb{P}(E_{\lambda_i})\) d&rsquo;appliquer notre <strong>projecteur</strong>, la norme reste
-la même.<!-- raw HTML omitted -->
+la même.<br>
 Cette probabilité est donnée par la formule suivante :</p>
 $$
 \mathbb{P}(E_{\lambda_i}) = 
@@ -233,7 +233,7 @@ $$
 \mathbb{P}(E_{\lambda_i}) = 
 \dfrac{\bra{\psi} P_{\lambda_i} \ket{\psi}}{\bra{\psi} \ket{\psi}}
 $$<p>Nous savons déjà que \(\bra{\psi}\ket{\psi}\) correspond au module au carré des
-coefficients de notre fonction d&rsquo;onde \(\ket{\psi}\).<!-- raw HTML omitted -->
+coefficients de notre fonction d&rsquo;onde \(\ket{\psi}\).<br>
 Concernant le calcul de \(P_{\lambda_i}\ket{\psi}\), nous avons :</p>
 $$
 P_{\lambda_i} \ket{\psi} = \sum_{\ket{\phi_i} \in \mathcal{B}(E_\lambda)} 

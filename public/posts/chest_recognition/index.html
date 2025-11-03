@@ -8,15 +8,11 @@
 <title>Extraction d&#39;information sur image (Chest-Reco) | renauxv</title>
 <meta name="keywords" content="Python, Automatisation">
 <meta name="description" content="Le jeu Garry&rsquo;s Mod est une plateforme qui propose de nombreux mini jeux.
-Cet article présente la mise en place d’un système d’extraction
-d’informations à partir de plusieurs captures d’écran d’un coffre du jeux naruto RP, afin de connaître automatiquement le contenu de ce coffre.
+Cet article présente la mise en place d’un système d’extraction  d’informations à partir de plusieurs captures d’écran d’un coffre du jeux naruto RP, afin de connaître automatiquement le contenu de ce coffre.
 Cet article expliquera en détail la mise en place de ce projet Python, disponible sur GitHub : dépôt GitHub.
-🧠 Objectif du projet
+Objectif du projet
 L’objectif est d’automatiser l’analyse visuelle des coffres à l’aide d’un
-script Python. Ce projet met en œuvre des techniques de traitement
-d’image et d’extraction de texte, tout en gardant à l’esprit la
-nécessité de concevoir une solution légère et peu consommatrice en
-ressources.">
+script Python. Ce projet met en œuvre des techniques de traitement   d’image et d’extraction de texte, tout en gardant à l’esprit la  nécessité de concevoir une solution légère et peu consommatrice en ressources.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/chest_recognition/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
@@ -141,7 +137,7 @@ ressources.">
     <h1 class="post-title entry-hint-parent">
       Extraction d&#39;information sur image (Chest-Reco)
     </h1>
-    <div class="post-meta"><span title='2025-10-27 00:00:00 +0000 UTC'>October 27, 2025</span>&nbsp;·&nbsp;<span>3 min</span>
+    <div class="post-meta"><span title='2025-10-27 00:00:00 +0000 UTC'>October 27, 2025</span>&nbsp;·&nbsp;<span>6 min</span>
 
 </div>
   </header> <div class="toc">
@@ -152,28 +148,38 @@ ressources.">
 
         <div class="inner"><ul><ul>
                 <li>
-                    <a href="#-objectif-du-projet" aria-label="🧠 Objectif du projet">🧠 Objectif du projet</a></li>
+                    <a href="#objectif-du-projet" aria-label="Objectif du projet">Objectif du projet</a></li>
                 <li>
-                    <a href="#-code-source" aria-label="💻 Code source">💻 Code source</a></li>
+                    <a href="#code-source" aria-label="Code source">Code source</a></li>
                 <li>
-                    <a href="#-description-du-probl%c3%a8me" aria-label="🧩 Description du problème">🧩 Description du problème</a><ul>
+                    <a href="#description-du-probl%c3%a8me" aria-label="Description du problème">Description du problème</a><ul>
                         
                 <li>
-                    <a href="#-exemple-de-coffre" aria-label="📸 Exemple de coffre">📸 Exemple de coffre</a></li></ul>
+                    <a href="#exemple-de-coffre" aria-label="Exemple de coffre">Exemple de coffre</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-fragmentation-du-probl%c3%a8me" aria-label="🧠 Fragmentation du problème">🧠 Fragmentation du problème</a></li></ul>
+                    <a href="#fragmentation-du-probl%c3%a8me" aria-label="Fragmentation du problème">Fragmentation du problème</a></li></ul>
                     
                 <li>
-                    <a href="#-architecture-du-projet" aria-label="🧱 Architecture du projet">🧱 Architecture du projet</a><ul>
+                    <a href="#architecture-du-projet" aria-label="Architecture du projet">Architecture du projet</a><ul>
                         <ul>
                         
                 <li>
-                    <a href="#-organisation-des-fichiers-de-test" aria-label="🧩 Organisation des fichiers de test">🧩 Organisation des fichiers de test</a></li></ul>
+                    <a href="#organisation-des-fichiers-de-test" aria-label="Organisation des fichiers de test">Organisation des fichiers de test</a></li></ul>
                     </ul>
                 </li>
                 <li>
-                    <a href="#-extraction-des-items" aria-label="🧩 Extraction des items">🧩 Extraction des items</a>
+                    <a href="#extraction-des-items" aria-label="Extraction des items">Extraction des items</a><ul>
+                        
+                <li>
+                    <a href="#contrainte-de-lextraction" aria-label="Contrainte de l&rsquo;extraction">Contrainte de l&rsquo;extraction</a></li>
+                <li>
+                    <a href="#mise-en-place-de-lextraction-dobjet" aria-label="Mise en place de l&rsquo;extraction d&rsquo;objet">Mise en place de l&rsquo;extraction d&rsquo;objet</a></li></ul>
+                </li>
+                <li>
+                    <a href="#extraction-du-nombre" aria-label="Extraction du nombre">Extraction du nombre</a></li>
+                <li>
+                    <a href="#traitement-final" aria-label="Traitement final">Traitement final</a>
                 </li>
             </ul>
         </div>
@@ -181,48 +187,31 @@ ressources.">
 </div>
 
   <div class="post-content"><p>Le jeu <strong>Garry&rsquo;s Mod</strong> est une plateforme qui propose de nombreux <em>mini jeux</em>.<br>
-Cet article présente la mise en place d’un système d’<strong>extraction<br>
-d’informations</strong> à partir de plusieurs <strong>captures d’écran</strong> d’un coffre du jeux <em>naruto RP</em>, afin de connaître automatiquement le contenu de ce coffre.</p>
+Cet article présente la mise en place d’un système d’<strong>extraction  d’informations</strong> à partir de plusieurs <strong>captures d’écran</strong> d’un coffre du jeux <em>naruto RP</em>, afin de connaître automatiquement le contenu de ce coffre.</p>
 <p>Cet article expliquera en détail la mise en place de ce projet Python, disponible sur GitHub : <a href="https://github.com/titusse3/chest-reco">dépôt GitHub</a>.</p>
-<h2 id="-objectif-du-projet">🧠 Objectif du projet<a hidden class="anchor" aria-hidden="true" href="#-objectif-du-projet">#</a></h2>
+<h2 id="objectif-du-projet">Objectif du projet<a hidden class="anchor" aria-hidden="true" href="#objectif-du-projet">#</a></h2>
 <p>L’objectif est d’automatiser l’analyse visuelle des coffres à l’aide d’un<br>
-script <strong>Python</strong>. Ce projet met en œuvre des techniques de <strong>traitement<br>
-d’image</strong> et d’<strong>extraction de texte</strong>, tout en gardant à l’esprit la<br>
-nécessité de concevoir une solution <strong>légère et peu consommatrice en<br>
-ressources</strong>.</p>
-<h2 id="-code-source">💻 Code source<a hidden class="anchor" aria-hidden="true" href="#-code-source">#</a></h2>
+script <em>Python</em>. Ce projet met en œuvre des techniques de <strong>traitement   d’image</strong> et d’<strong>extraction de texte</strong>, tout en gardant à l’esprit la  nécessité de concevoir une solution légère et peu consommatrice en ressources.</p>
+<h2 id="code-source">Code source<a hidden class="anchor" aria-hidden="true" href="#code-source">#</a></h2>
 <p>Le projet complet est disponible sur <strong>GitHub</strong> :
 <a href="https://github.com/titusse3/chest-reco">dépôt GitHub du projet</a></p>
-<h2 id="-description-du-problème">🧩 Description du problème<a hidden class="anchor" aria-hidden="true" href="#-description-du-problème">#</a></h2>
-<p>Dans le mini jeu <em>Naruto RP</em>, il existe des <strong>coffres</strong> dans lesquels il est<br>
-possible de <strong>stocker des ressources</strong>. Ces ressources servent ensuite à<br>
-<strong>construire d’autres éléments</strong>.</p>
-<p>Très rapidement, une question se pose : <em>combien d’éléments puis je créer<br>
-avec le contenu actuel de mon coffre</em> ?</p>
-<p>Comme <strong>aucune API n’est disponible</strong>, l’objectif de ce mini projet est de<br>
-<strong>récupérer automatiquement le contenu d’un coffre</strong> à partir de <strong>captures<br>
-d’écran</strong> qui le représentent.</p>
-<h3 id="-exemple-de-coffre">📸 Exemple de coffre<a hidden class="anchor" aria-hidden="true" href="#-exemple-de-coffre">#</a></h3>
+<h2 id="description-du-problème">Description du problème<a hidden class="anchor" aria-hidden="true" href="#description-du-problème">#</a></h2>
+<p>Dans le mini jeu <em>Naruto RP</em>, il existe des coffres dans lesquels il est  possible de stocker des ressources.</p>
+<p>Très rapidement, une question se pose : <em>combien d’éléments ai-je actuellement dans mon coffre</em> ?</p>
+<p>Comme aucune <em>API</em> n’est disponible, l’objectif de ce mini projet est de  récupérer automatiquement le contenu d’un coffre à partir de captures  d’écran.</p>
+<h3 id="exemple-de-coffre">Exemple de coffre<a hidden class="anchor" aria-hidden="true" href="#exemple-de-coffre">#</a></h3>
 <p>Voici à quoi ressemble le contenu complet d’un coffre :</p>
 <p><img alt="Exemple de contenu du coffre" loading="lazy" src="https://i.imgur.com/AWLVAeL.gif#center"></p>
-<h2 id="-fragmentation-du-problème">🧠 Fragmentation du problème<a hidden class="anchor" aria-hidden="true" href="#-fragmentation-du-problème">#</a></h2>
+<h2 id="fragmentation-du-problème">Fragmentation du problème<a hidden class="anchor" aria-hidden="true" href="#fragmentation-du-problème">#</a></h2>
 <p>Le problème a été découpé de la manière suivante :</p>
 <ol>
-<li><strong>Extraction</strong> d’une sous partie de l’image contenant les informations<br>
-pertinentes.</li>
+<li><strong>Extraction</strong> d’une sous partie de l’image contenant les informations    pertinentes.</li>
 <li><strong>Récupération</strong> du nombre présent sur la zone extraite.</li>
-<li><strong>Vérification</strong> des données obtenues et <strong>mise en forme</strong> du résultat.</li>
+<li><strong>Vérification</strong> des données obtenues et mise en forme du résultat.</li>
 </ol>
-<p>L’objectif final est que <strong>toutes les informations soient extraites<br>
-automatiquement</strong>, sans nécessiter <strong>aucune interaction humaine</strong>.</p>
-<h1 id="-architecture-du-projet">🧱 Architecture du projet<a hidden class="anchor" aria-hidden="true" href="#-architecture-du-projet">#</a></h1>
-<p>L’architecture de ce projet s’inspire de plusieurs blogs et documentations<br>
-techniques. Elle suit une structure <strong>standard</strong> recommandée par<br>
-<a href="https://packaging.python.org/en/latest/guides/writing-pyproject-toml/"><em>pyproject</em></a>.</p>
-<p>Les différents <strong>modules</strong> ainsi que l’<strong>application principale</strong> se<br>
-trouvent dans le dossier <code>src</code>, tandis que les <strong>tests</strong> sont séparés en<br>
-<strong>tests unitaires</strong> et <strong>tests d’intégration</strong> dans le dossier <code>tests</code>.<br>
-Le framework de test utilisé est <strong>pytest</strong>.</p>
+<p>L’objectif final est que <strong>toutes les informations soient extraites  automatiquement</strong>, sans nécessiter aucune interaction humaine.</p>
+<h1 id="architecture-du-projet">Architecture du projet<a hidden class="anchor" aria-hidden="true" href="#architecture-du-projet">#</a></h1>
+<p>L’architecture de ce projet s’inspire de plusieurs blogs et documentations  techniques. Elle suit une structure <strong>standard</strong> recommandée par <a href="https://packaging.python.org/en/latest/guides/writing-pyproject-toml/"><em>pyproject</em></a>.</p>
 <pre tabindex="0"><code>.
 ├── src/
 │   ├── modules1/
@@ -233,11 +222,8 @@ Le framework de test utilisé est <strong>pytest</strong>.</p>
 └── tests/
     ├── integration_tests/
     └── unit_tests/
-</code></pre><p>Cette organisation permet d’exécuter chaque test depuis n’importe quel<br>
-emplacement tout en gardant un accès direct aux modules à tester.<br>
-Pour cela, des fichiers <code>__init__.py</code> sont présents dans les dossiers de<br>
-tests afin d’ajuster correctement le chemin d’import des modules.</p>
-<h3 id="-organisation-des-fichiers-de-test">🧩 Organisation des fichiers de test<a hidden class="anchor" aria-hidden="true" href="#-organisation-des-fichiers-de-test">#</a></h3>
+</code></pre><p>Cette organisation permet d’exécuter chaque test depuis n’importe quel  emplacement tout en gardant un accès direct aux modules à tester.  Pour cela, des fichiers <code>__init__.py</code> sont présents dans les dossiers de  tests afin d’ajuster correctement le chemin d’import des modules.</p>
+<h3 id="organisation-des-fichiers-de-test">Organisation des fichiers de test<a hidden class="anchor" aria-hidden="true" href="#organisation-des-fichiers-de-test">#</a></h3>
 <pre tabindex="0"><code>tests/
     ├── integration_tests/
     │   ├── __init__.py
@@ -253,27 +239,108 @@ from os.path import dirname, join, normpath
 
 THIS_DIR = dirname(__file__)
 PROJ_DIR = normpath(join(THIS_DIR, &#39;..&#39;, &#39;..&#39;, &#39;src&#39;))
-</code></pre><p>Grâce au module <code>os.path</code>, le répertoire d’exécution est fixé à celui où se<br>
-trouvent les <strong>sources</strong>. Cela permet d’importer facilement toutes les<br>
-dépendances nécessaires, sans configuration complexe.</p>
-<h1 id="-extraction-des-items">🧩 Extraction des items<a hidden class="anchor" aria-hidden="true" href="#-extraction-des-items">#</a></h1>
-<p>Dans le jeu, il existe actuellement <strong>48 items</strong> pouvant être utilisés pour<br>
-créer un peu plus de <strong>17 équipements</strong>.<br>
-L’objectif, pour chaque objet donné, est d’<strong>extraire la partie de l’image</strong><br>
-représentant cet objet, à condition que celui ci soit bien présent dans<br>
-l’image.</p>
-<p>Pour cela, j’ai choisi d’utiliser le module<br>
-<a href="https://opencv.org/"><code>opencv</code></a>. Cette bibliothèque très complète permet,<br>
-entre autres fonctionnalités, de <strong>rechercher une “template”</strong> (un modèle<br>
-d’image) à l’intérieur d’une autre image, <strong>sans aucune utilisation<br>
-d’intelligence artificielle</strong>.</p>
-<p>Grâce à différents <strong>algorithmes de traitement d’image</strong>, <code>OpenCV</code> est capable<br>
-de détecter une sous partie dans une image avec un <strong>taux de ressemblance</strong>.</p>
-<p>Voici un exemple simple : une recherche de pièces a été effectuée sur<br>
-l’image de gauche. Le résultat, visible à droite, montre les correspondances<br>
-encadrées en <strong>rouge</strong>.</p>
+</code></pre><p>Grâce au module <code>os.path</code>, le répertoire d’exécution est fixé à celui où se  trouvent les <em>sources</em>. Cela permet d’importer facilement toutes les  dépendances nécessaires, sans configuration complexe.</p>
+<h1 id="extraction-des-items">Extraction des items<a hidden class="anchor" aria-hidden="true" href="#extraction-des-items">#</a></h1>
+<p>L’objectif, pour chaque objet donné, est d’extraire la partie de l’image représentant cet objet, à condition que celui ci soit bien présent dans  l’image.</p>
+<p>Pour cela, le module  <a href="https://opencv.org/"><code>opencv</code></a> est utilisé. Elle permet de <strong>rechercher une “template”</strong> à l’intérieur d’une image, sans aucune <strong>ia</strong>.</p>
+<p>Voici un exemple simple : une recherche de pièces a été effectuée sur  l’image de gauche. Le résultat, visible à droite, montre les correspondances  encadrées en rouge.</p>
 <p><img alt="Exemple d’utilisation d’OpenCV" loading="lazy" src="https://i.imgur.com/pgQ9LMu.jpeg#center"><br>
 <em>Image tirée de la documentation officielle d’OpenCV.</em></p>
+<h2 id="contrainte-de-lextraction">Contrainte de l&rsquo;extraction<a hidden class="anchor" aria-hidden="true" href="#contrainte-de-lextraction">#</a></h2>
+<p>Tout d&rsquo;abord, il est essentiel que le motif utilisé ait les mêmes dimensions que ses occurrences possibles dans l’image à analyser.</p>
+<p>Cette contrainte a forcé l’application à adopter des dimensions spécifiques pour les images d&rsquo;entrée. Les <em>captures d’écran</em> du contenu du coffre doivent donc être uniformisées, ici au format <code>1920x1080</code>.</p>
+<p>Pour les images ne respectant pas cette dimension, un traitement via <code>OpenCV</code> permet de les redimensionner, assurant ainsi une cohérence entre toutes les entrées.</p>
+<h2 id="mise-en-place-de-lextraction-dobjet">Mise en place de l&rsquo;extraction d&rsquo;objet<a hidden class="anchor" aria-hidden="true" href="#mise-en-place-de-lextraction-dobjet">#</a></h2>
+<p>Prenons par exemple l’extraction <em>des planches de bois</em>, donnée par l’image :</p>
+<p><img alt="Image de planche de bois" loading="lazy" src="https://i.imgur.com/bmqBWEH.jpeg#center"></p>
+<p>Ici, on peut voir qu’il y a le nombre de cet objet en haut à droite, ce qui sera le cas pour n’importe quel autre objet.
+Cependant, lorsque l’on souhaite rechercher combien de <em>planches de bois</em> il y a dans l’image, nous devons rechercher l’objet <em>planches de bois</em> sans ce nombre.
+C’est pour cela que le <em>template</em> recherché sera l’image de l’objet seul, sans le nombre.
+Typiquement, pour la planche de bois, il s’agira de l’image suivante :</p>
+<p><img alt="Template de l&rsquo;objet, planche de bois" loading="lazy" src="https://i.imgur.com/57bMFvd.png#center"></p>
+<p>Une fois ce <em>template</em> obtenu, on peut assez simplement rechercher l’objet dans l’image d’un coffre à l’aide du code Python ci-dessous :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> cv2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Le pourcentage minimal de ressemblance souhaité entre la détection et le template</span>
+</span></span><span style="display:flex;"><span>DEFAULT_TEMPLATE_MATCHING_THRESHOLD <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.8</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    img <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>imread(<span style="color:#e6db74">&#34;coffre.jpg&#34;</span>)  <span style="color:#75715e"># Image du coffre</span>
+</span></span><span style="display:flex;"><span>    template <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>imread(<span style="color:#e6db74">&#34;item.png&#34;</span>)  <span style="color:#75715e"># Image du template (ex: planche de bois)</span>
+</span></span><span style="display:flex;"><span>    template_height, template_width <span style="color:#f92672">=</span> template<span style="color:#f92672">.</span>shape[:<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    template_matching <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>matchTemplate(template, img, cv2<span style="color:#f92672">.</span>TM_CCOEFF_NORMED)
+</span></span><span style="display:flex;"><span>    _, max_val, _, max_loc <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>minMaxLoc(template_matching)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> max_val <span style="color:#f92672">&gt;=</span> DEFAULT_TEMPLATE_MATCHING_THRESHOLD:
+</span></span><span style="display:flex;"><span>        x, y <span style="color:#f92672">=</span> max_loc
+</span></span><span style="display:flex;"><span>        detection <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;TOP_LEFT_X&#34;</span>: x,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;TOP_LEFT_Y&#34;</span>: y,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;BOTTOM_RIGHT_X&#34;</span>: x <span style="color:#f92672">+</span> template_width,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;BOTTOM_RIGHT_Y&#34;</span>: y <span style="color:#f92672">+</span> template_height,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;MATCH_VALUE&#34;</span>: max_val
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        x1, y1 <span style="color:#f92672">=</span> detection[<span style="color:#e6db74">&#34;TOP_LEFT_X&#34;</span>], detection[<span style="color:#e6db74">&#34;TOP_LEFT_Y&#34;</span>]
+</span></span><span style="display:flex;"><span>        x2, y2 <span style="color:#f92672">=</span> detection[<span style="color:#e6db74">&#34;BOTTOM_RIGHT_X&#34;</span>], detection[<span style="color:#e6db74">&#34;BOTTOM_RIGHT_Y&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        cv2<span style="color:#f92672">.</span>rectangle(img, (x1, y1), (x2, y2), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>), thickness<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#34;Detection&#34;</span>, img)
+</span></span><span style="display:flex;"><span>        cv2<span style="color:#f92672">.</span>waitKey(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        cv2<span style="color:#f92672">.</span>destroyAllWindows()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Aucune correspondance trouvée.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div><p>On obtient alors, sur un coffre, le résultat suivant :</p>
+<p><img alt="Résultat de la recherche" loading="lazy" src="https://i.imgur.com/CAlwlTU.jpeg#center"></p>
+<p>Une fois l’objet trouvé, il suffit d’ajouter un offset de hauteur d’environ 45 pixels pour inclure le nombre associé.
+Grâce à cela, il devient assez simple de récupérer à la fois l’objet et sa quantité en une seule image.</p>
+<h1 id="extraction-du-nombre">Extraction du nombre<a hidden class="anchor" aria-hidden="true" href="#extraction-du-nombre">#</a></h1>
+<p>Pour la quantité d’un objet, il existe deux cas :</p>
+<ul>
+<li>La quantité est égale à 1 ; dans ce cas, aucune quantité n’est affichée.</li>
+</ul>
+<p><img alt="Image de planche de bois" loading="lazy" src="https://i.imgur.com/hBwj3f0.png#center"></p>
+<ul>
+<li>La quantité est supérieure ou égale à 2 ; dans ce cas, la quantité est affichée sous la forme <code>x</code> suivie du nombre correspondant.</li>
+</ul>
+<p><img alt="Image de planche de bois" loading="lazy" src="https://i.imgur.com/bmqBWEH.jpeg#center"></p>
+<p>L’objectif, afin de rendre la reconnaissance du nombre aussi simple que possible, est d’extraire la quantité lorsqu’elle est présente dans l’image.
+Pour cela, on effectue une nouvelle recherche de template dont le modèle est le caractère <code>x</code> placé avant le nombre.
+Si le <code>x</code> n’est pas trouvé, alors l’objet est présent en un seul exemplaire.
+Dans le cas contraire, on extrait le nombre de l’image à partir du <code>x</code> détecté,
+en ajoutant un <em>offset</em> comme précédemment.</p>
+<p>Ce qui nous donne, dans notre cas :</p>
+<img src="https://i.imgur.com/NQDf7lK.png" alt="Résultat de l'extraction du nombre" width="250" style="display:block;margin:0 auto;" />
+<p>Une fois cette partie extraite, on obtient une image contenant uniquement le nombre, que l’on peut transmettre à un modèle de reconnaissance de texte.
+Ce projet utilise <code>easyocr</code>, un module de reconnaissance de texte sur image.
+Après quelques prétraitements, notamment la correction des symboles <code>1</code>
+souvent reconnus comme des <code>l</code> à cause de la police d’écriture,
+on peut finalement identifier correctement le nombre affiché.</p>
+<h1 id="traitement-final">Traitement final<a hidden class="anchor" aria-hidden="true" href="#traitement-final">#</a></h1>
+<p>Un coffre étant représenter par plusieur capture de celui-ci, un traitement multi-thread est mis en place. Pour chaqu&rsquo;une des images, une recherche des tous les items possible est faite avec la <code>pipeline</code> suivante :</p>
+<ol>
+<li>
+<p><strong>Détection des objets</strong>
+À l’aide de la recherche de <em>template</em> (<code>cv2.matchTemplate</code>), on identifie la présence des objets (ex. : planches de bois) dans l’image du coffre.</p>
+</li>
+<li>
+<p><strong>Extraction du nombre associé</strong>
+Une fois l’objet trouvé, une nouvelle recherche est effectuée pour détecter le symbole <strong><code>x</code></strong> précédant la quantité.
+Si ce symbole est présent, la portion d’image correspondante au nombre est extraite.</p>
+</li>
+<li>
+<p><strong>Reconnaissance du nombre</strong>
+L’image extraite du nombre est ensuite transmise à <code>easyocr</code>, un module de reconnaissance de texte.
+Après quelques prétraitements (notamment la correction des <code>1</code> mal reconnus comme <code>l</code>), on obtient la quantité exacte de l’objet.</p>
+</li>
+</ol>
+<p>Une vérification finale est mise en place afin de s’assurer qu’aucun item n’a été détecté sur plusieurs images différentes.
+Si c’est le cas et que les deux quantités diffèrent, une erreur est levée.
+Dans le cas contraire, le duplicat est supprimé.</p>
 
 
   </div>

@@ -24,6 +24,8 @@ menu:
 
 markup:
   goldmark:
+    renderer:
+      unsafe: true
     extensions:
       passthrough:
         delimiters:
@@ -49,9 +51,6 @@ params:
       sait). Par ailleurs, des articles plus élaborés seront proposés dans la 
       rubrique **Post**, dans le but de décrire intégralement, que ce soit des 
       gros projets ou encore des présentations complète de notion théorique.
-
-      >  Il est fort probable que des erreurs soit présente dans ce blog, 
-      merci de me les signaler à contact@renaux.fr. 
   
   socialIcons:
     - name: "github"

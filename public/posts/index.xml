@@ -15,15 +15,11 @@
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/chest_recognition/</guid>
       <description>&lt;p&gt;Le jeu &lt;strong&gt;Garry&amp;rsquo;s Mod&lt;/strong&gt; est une plateforme qui propose de nombreux &lt;em&gt;mini jeux&lt;/em&gt;.&lt;br&gt;
-Cet article présente la mise en place d’un système d’&lt;strong&gt;extraction&lt;br&gt;
-d’informations&lt;/strong&gt; à partir de plusieurs &lt;strong&gt;captures d’écran&lt;/strong&gt; d’un coffre du jeux &lt;em&gt;naruto RP&lt;/em&gt;, afin de connaître automatiquement le contenu de ce coffre.&lt;/p&gt;
+Cet article présente la mise en place d’un système d’&lt;strong&gt;extraction  d’informations&lt;/strong&gt; à partir de plusieurs &lt;strong&gt;captures d’écran&lt;/strong&gt; d’un coffre du jeux &lt;em&gt;naruto RP&lt;/em&gt;, afin de connaître automatiquement le contenu de ce coffre.&lt;/p&gt;
 &lt;p&gt;Cet article expliquera en détail la mise en place de ce projet Python, disponible sur GitHub : &lt;a href=&#34;https://github.com/titusse3/chest-reco&#34;&gt;dépôt GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;-objectif-du-projet&#34;&gt;🧠 Objectif du projet&lt;/h2&gt;
+&lt;h2 id=&#34;objectif-du-projet&#34;&gt;Objectif du projet&lt;/h2&gt;
 &lt;p&gt;L’objectif est d’automatiser l’analyse visuelle des coffres à l’aide d’un&lt;br&gt;
-script &lt;strong&gt;Python&lt;/strong&gt;. Ce projet met en œuvre des techniques de &lt;strong&gt;traitement&lt;br&gt;
-d’image&lt;/strong&gt; et d’&lt;strong&gt;extraction de texte&lt;/strong&gt;, tout en gardant à l’esprit la&lt;br&gt;
-nécessité de concevoir une solution &lt;strong&gt;légère et peu consommatrice en&lt;br&gt;
-ressources&lt;/strong&gt;.&lt;/p&gt;</description>
+script &lt;em&gt;Python&lt;/em&gt;. Ce projet met en œuvre des techniques de &lt;strong&gt;traitement   d’image&lt;/strong&gt; et d’&lt;strong&gt;extraction de texte&lt;/strong&gt;, tout en gardant à l’esprit la  nécessité de concevoir une solution légère et peu consommatrice en ressources.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Génération Augmentée de récupération (RAG)</title>
