@@ -21,3 +21,10 @@ ob init # créer un projet
 ob run # lance le projet
 ob hoogle # lance une doc hoogle du projet
 ```
+
+## Réseaux
+
+```
+ss -tnlp # liste tous les ports écoutés par la machine
+ip addr # affiche les interfaces réseau
+```

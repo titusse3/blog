@@ -65,5 +65,19 @@
       <guid>http://localhost:1313/tags/raylib/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Commande</title>
+      <link>http://localhost:1313/tags/commande/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/commande/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
