@@ -33,11 +33,12 @@ $$
 \end{split}
 $$
 
-> Pour vérifier que nous n’avons omis aucune décomposition, voici le nombre de 
-> décompositions pour les entiers de 1 à 10 :
+{{< admonition >}}
+Pour vérifier que nous n’avons omis aucune décomposition, voici le nombre de 
+décompositions pour les entiers de 1 à 10 :
 
-> 1, 2, 3, 5, 7, 11, 15, 22, 30, 42.
-
+1, 2, 3, 5, 7, 11, 15, 22, 30, 42.
+{{< /admonition >}}
 ---
 
 ### Étape 2 : Expression en termes de \(S \circ T\)
@@ -90,10 +91,12 @@ les exposants des différents \(t_j\). Par exemple, pour la décomposition
 correspondants sont \(1\) pour \(t_1\) et \(1\) pour \(t_2\), d'où le 
 coefficient multinomial \(\binom{2}{1,1} = 2\).
 
-> Il faut se rappeler que :
-> $$\binom{n}{k_1, k_2, \dots, k_r} = \dfrac{n!}{\prod\limits_{i}^r k_i!}$$
-> Et que pour \(r = 1\) alors :
-> $$\binom{n}{k} = \dfrac{n!}{k!(n - k)!}$$
+{{< admonition >}}
+Il faut se rappeler que :
+$$\binom{n}{k_1, k_2, \dots, k_r} = \dfrac{n!}{\prod\limits_{i}^r k_i!}$$
+Et que pour \(r = 1\) alors :
+$$\binom{n}{k} = \dfrac{n!}{k!(n - k)!}$$
+{{< /admonition >}}
 
 ---
 
