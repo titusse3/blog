@@ -34,3 +34,5 @@ ip addr # affiche les interfaces réseau
 ```
 gpg --list-key # liste des clés
 ```
+
+{{< sidenote "Markdown" >}}A simple markup language for easy formatting.{{< /sidenote >}}

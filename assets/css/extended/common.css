@@ -1,0 +1,299 @@
+/* Basic CSS equivalent of the original Tailwind + nested rules */
+
+.sidenote-content {
+  position: absolute;
+  right: 0;
+}
+
+/* Counter base */
+.sidenote {
+  display: inline;
+  counter-increment: sidenote-counter;
+}
+
+/* Active / hover color */
+.sidenote:active,
+.sidenote:active .sidenote-content {
+  color: #0284c7; /* approx. sky-600 */
+}
+
+.sidenote:hover .sidenote-mark::after,
+.sidenote:hover .sidenote-content::before {
+  color: #0284c7;
+}
+
+/* Mark content (superscript counter) */
+.sidenote-mark::after {
+  display: inline;
+  vertical-align: super;
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 600; /* semibold */
+  content: counter(sidenote-counter);
+}
+
+
+/* Content pseudo before (counter + dot, positioned at side for large screens) */
+.sidenote-content::before {
+  position: absolute;
+  left: -4rem; /* -left-16 */
+  top: 0;
+  bottom: 0;
+  display: flex;
+  width: 3.5rem; /* w-14 */
+  align-items: flex-start; /* items-start */
+  justify-content: flex-end; /* justify-end */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600;
+  content: counter(sidenote-counter) '.';
+}
+
+/* Accessibility helpers for "sr-only" and its inverse */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.not-sr-only {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  border: 0 !important;
+}
+
+/* Motion safe transition */
+@media (prefers-reduced-motion: no-preference) {
+  .sidenote-mark {
+    transition: all 200ms ease;
+  }
+}
+
+/* Responsive rules matching Tailwind's max-lg (max-width:1023px) */
+@media (max-width: 1023px) {
+  /* Hide the automatic counters on small screens */
+  .sidenote-mark::after,
+  .sidenote-content::before {
+    display: none;
+  }
+
+  /* Make sidenote content screen-reader-only by default on small screens */
+  .sidenote-checkbox ~ .sidenote-content {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  /* When checkbox is checked, reveal and style the content for small screens */
+  .sidenote-checkbox:checked ~ .sidenote-content {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0.5rem 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+    left: auto;
+    float: left;
+    display: block;
+    min-width: 100%;
+    padding-left: 1rem;
+    color: #0284c7;
+  }
+
+  /* When checkbox is checked, adjust mark appearance on small screens */
+  .sidenote-checkbox:checked ~ .sidenote-mark {
+    text-decoration: none;
+    color: #0284c7;
+  }
+
+  /* Make marks interactive/underlined on small screens */
+  .sidenote-mark {
+    cursor: pointer;
+    text-decoration-line: underline;
+    text-decoration-color: #0284c7;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+}
+
+/* Fallback / inverse media used in original (keeps original specificity) */
+@media not all and (min-width: 1024px) {
+  .sidenote-checkbox ~ .sidenote-content {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
+/* Checked state rules lifted out of nested syntax */
+@media not all and (min-width: 1024px) {
+  .sidenote-checkbox:checked ~ .sidenote-content {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  .sidenote-checkbox:checked ~ .sidenote-content {
+    left: auto;
+  }
+
+  .sidenote-checkbox:checked ~ .sidenote-content {
+    float: left;
+  }
+
+  .sidenote-checkbox:checked ~ .sidenote-content {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidenote-checkbox:checked ~ .sidenote-content {
+    display: block;
+  }
+
+  .sidenote-checkbox:checked ~ .sidenote-content {
+    min-width: 100%;
+  }
+
+  .sidenote-checkbox:checked ~ .sidenote-content {
+    padding-left: 1rem;
+  }
+
+  .sidenote-checkbox:checked ~ .sidenote-content {
+    --tw-text-opacity: 1;
+    color: rgb(2 132 199 / var(--tw-text-opacity));
+  }
+
+  .sidenote-checkbox:checked ~ .sidenote-mark {
+    --tw-text-opacity: 1;
+    color: rgb(2 132 199 / var(--tw-text-opacity));
+  }
+}
+
+/* Mark when checkbox is checked (general) */
+.sidenote-checkbox:checked ~ .sidenote-mark {
+  text-decoration-line: none;
+}
+
+/* Active / hover color (kept with opacity variable as in selection) */
+.sidenote:active,
+.sidenote:active .sidenote-content {
+  --tw-text-opacity: 1;
+  color: rgb(2 132 199 / var(--tw-text-opacity));
+}
+
+.sidenote:hover .sidenote-mark::after,
+.sidenote:hover .sidenote-content::before {
+  --tw-text-opacity: 1;
+  color: rgb(2 132 199 / var(--tw-text-opacity));
+}
+
+/* sidenote-mark ::after consolidated */
+.sidenote-mark::after {
+  display: inline;
+  vertical-align: super;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  content: counter(sidenote-counter);
+}
+
+/* Hide the mark counter on the inverse media from selection */
+@media not all and (min-width: 1024px) {
+  .sidenote-mark::after {
+    display: none;
+  }
+}
+
+/* Motion-safe refined transition (matches later, more specific settings) */
+@media (prefers-reduced-motion: no-preference) {
+  .sidenote-mark {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}
+
+/* Mark styling for larger screens (as in selection) */
+@media not all and (min-width: 1024px) {
+  .sidenote-mark {
+    cursor: pointer;
+    text-decoration-line: underline;
+    text-decoration-color: #0284c7;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+}
+
+/* sidenote-content ::before consolidated */
+.sidenote-content::before {
+  position: absolute;
+  left: -4rem;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  width: 3.5rem;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  content: counter(sidenote-counter) '.';
+}
+
+/* Hide content-counter pseudo on the inverse media from selection */
+@media not all and (min-width: 1024px) {
+  .sidenote-content::before {
+    display: none;
+  }
+}
+
+/* Motion safe transition for content */
+@media (prefers-reduced-motion: no-preference) {
+  .sidenote-content {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}
+
+/* Larger-screen position/size for sidenote content */
+@media (min-width: 1024px) {
+  .sidenote-content {
+    position: absolute;
+    right: 0px;
+    width: 12rem;
+    cursor: default;
+    margin-right: calc(-1 * 12rem - 1 * 4rem);
+  }
+}
