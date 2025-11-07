@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Todo self host | renauxv</title>
+<title>Manageur de tâches self host | renauxv</title>
 <meta name="keywords" content="Home Lab, Kanban Chart">
 <meta name="description" content="Kanban Chart
 J’ai eu la chance d’assister à une conférence sur la gestion du temps, organisée pour les étudiants membres d’une association. Parmi les outils et conseils présentés, celui qui m’a le plus marqué, c’est la mise en place d’un Kanban Board. Une méthode visuelle pour organiser et fragmenter ses tâches, suivre sa progression et rester motivé au quotidien.
@@ -133,12 +133,39 @@ Exemple de Kanban Chart pour la gestion d&rsquo;un projet de dévellopement.">
   <header class="post-header">
     <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/notes/">Notes</a></div>
     <h1 class="post-title entry-hint-parent">
-      Todo self host
+      Manageur de tâches self host
     </h1>
-    <div class="post-meta"><span title='2025-10-07 00:00:00 +0000 UTC'>October 7, 2025</span>&nbsp;·&nbsp;<span>2 min</span>
+    <div class="post-meta"><span title='2025-10-07 00:00:00 +0000 UTC'>October 7, 2025</span>&nbsp;·&nbsp;<span>4 min</span>
 
 </div>
-  </header> 
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#kanban-chart" aria-label="Kanban Chart">Kanban Chart</a><ul>
+                        
+                <li>
+                    <a href="#classification-de-t%c3%a2ches" aria-label="Classification de tâches">Classification de tâches</a></li>
+                <li>
+                    <a href="#tag" aria-label="Tag">Tag</a></li></ul>
+                </li>
+                <li>
+                    <a href="#mise-en-place-du-service" aria-label="Mise en place du service">Mise en place du service</a><ul>
+                        
+                <li>
+                    <a href="#protocole-caldav" aria-label="Protocole CalDav">Protocole CalDav</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content"><h1 id="kanban-chart">Kanban Chart<a hidden class="anchor" aria-hidden="true" href="#kanban-chart">#</a></h1>
 <p>J’ai eu la chance d’assister à une conférence sur la gestion du temps, organisée pour les étudiants membres d’une association. Parmi les outils et conseils présentés, celui qui m’a le plus marqué, c’est la mise en place d’un <strong>Kanban Board</strong>. Une méthode visuelle pour organiser et fragmenter ses tâches, suivre sa progression et rester motivé au quotidien.</p>
 <p><img alt="Exemple de Kanban Chart" loading="lazy" src="https://i.imgur.com/UerKINV.jpeg#center">
@@ -174,7 +201,97 @@ Pour les autres taches, elle doivent être classer, notament à l&rsquo;aide des
 </ul>
 <h1 id="mise-en-place-du-service">Mise en place du service<a hidden class="anchor" aria-hidden="true" href="#mise-en-place-du-service">#</a></h1>
 <p>Ce type de gestion de tâches peut être facilement mis en place sur des plateformes telles que <strong>Notion</strong> ou <strong>Obsidian</strong>. Cependant, il est important de garder à l’esprit que ces services utilisent les données des utilisateurs à leur manière et peuvent poser des questions de confidentialité.</p>
-<p>C’est pour cette raison que, pour certains besoins, opter pour une solution en <em>self-host</em> peut être intéressant et sécurisé.</p>
+<p>Pour cela, une solution de <em>self-hoste</em> s’avère particulièrement intéressante. De plus, la gestion des tâches gagne à être intégrée à un gestionnaire d’agenda. Cela permet de :</p>
+<ul>
+<li>Relier les tâches à des alertes pour ne rien oublier</li>
+<li>Définir des périodes de résolution afin de planifier efficacement le temps nécessaire à leur réalisation</li>
+</ul>
+<p>La façon la plus courante, en tous cas la plus commune est d&rsquo;utilier <strong>NextCloud</strong>. Notamment avec l&rsquo;application <strong>Tasks</strong> qui permet de gérer les tâches en Kanban et de les synchroniser. Cependant, la mise en place de <strong>NextCloud</strong> est lourde et consommatrice en ressources. Etant donner que pour utiliser un service <strong>NextCloud</strong>, il faut installer l&rsquo;ensemble de la suite.</p>
+<p>La <em><span class="sidenote">
+  
+  <label
+    tabindex="0"
+    role="mark"
+    aria-details="sidenote-01"
+    for="sidenote-checkbox-01"
+    class="sidenote-mark"
+    >stack</label
+  >
+  <small id="sidenote-01" class="sidenote-content">
+    <span class="sr-only"> (sidenote: </span>Ensemble d'applications mises bout à bout pour répondre à un problème<span class="sr-only">)</span>
+  </small>
+</span>
+</em> que j&rsquo;ai mis en place est basé sur le protocole <strong>CalDav</strong>.</p>
+<figure
+  role="note"
+  id="admonition-01"
+  aria-labelledby="admonition-caption-01"
+  class="admonition note  not-prose"
+>
+  <div class="flex items-center space-x-2 pb-2 font-semibold">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      class="lucide lucide-info"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 16v-4M12 8h.01" />
+    </svg>
+
+    <figcaption id="admonition-caption-01">
+        Note
+    </figcaption>
+  </div>
+
+  <div class="prose pl-8 text-inherit marker:text-inherit">
+    La solution de <strong>NextCloud</strong> aurait elle aussi utiliser ce protocole. Cependant, celle proposée ici est plus légère, étant une solution bien plus spécialisée à la tache à accomplir.
+  </div>
+</figure>
+
+<h2 id="protocole-caldav">Protocole CalDav<a hidden class="anchor" aria-hidden="true" href="#protocole-caldav">#</a></h2>
+<p>Le protocole <strong>CalDav</strong> est un standard ouvert qui permet la gestion des calendriers et des tâches via Internet. Bien qu&rsquo;utilisé, il est énormément décrié par sa complexité et sa mauvaise documentation. C&rsquo;est l&rsquo;une des raisons pour lesquelles peu de services sont disponibles pour héberger un serveur <strong>CalDav</strong>.</p>
+<p>L&rsquo;une des seules applications qui ne fessait que la mise en place d&rsquo;un server <strong>CalDav</strong> est <strong>Radicale</strong>. Après une installation très simple part <strong>docker</strong>, il suffit de configurer un client <strong>CalDav</strong> pour se connecter au serveur.
+Le client que j&rsquo;utilise est <strong>Thunderbird</strong>. En effet, en important le calendrier <strong>CalDav</strong> dans <strong>Thunderbird</strong>, les taches sont automatiquement récupérées par le client.</p>
+<figure
+  role="note"
+  id="admonition-02"
+  aria-labelledby="admonition-caption-02"
+  class="admonition note  not-prose"
+>
+  <div class="flex items-center space-x-2 pb-2 font-semibold">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      class="lucide lucide-info"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 16v-4M12 8h.01" />
+    </svg>
+
+    <figcaption id="admonition-caption-02">
+        Note
+    </figcaption>
+  </div>
+
+  <div class="prose pl-8 text-inherit marker:text-inherit">
+    Le service <strong>Radicale</strong> est un server et uniquement un server <strong>CalDav</strong>. Aucune <em>WebUi</em> ou interface graphique n&rsquo;est fournie par <strong>Radicale</strong>.
+  </div>
+</figure>
+
+<p>Une image de cette stack est visible ci-dessous :</p>
+<p><img alt="Schema stack CalDav" loading="lazy" src="https://i.imgur.com/w1HOknI.jpeg#center"></p>
 
 
   </div>
