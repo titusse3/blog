@@ -34,3 +34,11 @@ ip addr # affiche les interfaces réseau
 ```
 gpg --list-key # liste des clés
 ```
+
+## Git
+
+```
+git checkout -b <nom de la branche> # premet de créer et de changer de branche
+git push origin [nom de la branche] # permet de push la nouvelle branche
+git branch -a # liste de toutes les branches
+```
