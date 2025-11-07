@@ -39,6 +39,6 @@ gpg --list-key # liste des clés
 
 ```
 git checkout -b <nom de la branche> # premet de créer et de changer de branche
-git push origin [nom de la branche] # permet de push la nouvelle branche
+git push origin <nom de la branche> # permet de push la nouvelle branche
 git branch -a # liste de toutes les branches
 ```
