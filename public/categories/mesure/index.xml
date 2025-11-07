@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Mesure on renauxv</title>
-    <link>https://renauxv.fr/categories/mesure/</link>
+    <link>http://localhost:1313/categories/mesure/</link>
     <description>Recent content in Mesure on renauxv</description>
-    <generator>Hugo -- 0.146.3</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>fr-FR</language>
     <copyright>Renaux Verdiere Theo</copyright>
     <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://renauxv.fr/categories/mesure/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/mesure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mesure Quantique</title>
-      <link>https://renauxv.fr/notes/mesure_quantique/</link>
+      <link>http://localhost:1313/notes/mesure_quantique/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/notes/mesure_quantique/</guid>
+      <guid>http://localhost:1313/notes/mesure_quantique/</guid>
       <description></description>
     </item>
   </channel>

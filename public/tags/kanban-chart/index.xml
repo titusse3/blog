@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kanban Chart on renauxv</title>
+    <link>http://localhost:1313/tags/kanban-chart/</link>
+    <description>Recent content in Kanban Chart on renauxv</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>fr-FR</language>
+    <copyright>Renaux Verdiere Theo</copyright>
+    <lastBuildDate>Tue, 07 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/kanban-chart/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Todo self host</title>
+      <link>http://localhost:1313/notes/todo_self_host/</link>
+      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/todo_self_host/</guid>
+      <description>&lt;h1 id=&#34;kanban-chart&#34;&gt;Kanban Chart&lt;/h1&gt;
+&lt;p&gt;J’ai eu la chance d’assister à une conférence sur la gestion du temps, organisée pour les étudiants membres d’une association. Parmi les outils et conseils présentés, celui qui m’a le plus marqué, c’est la mise en place d’un &lt;strong&gt;Kanban Board&lt;/strong&gt;. Une méthode visuelle pour organiser et fragmenter ses tâches, suivre sa progression et rester motivé au quotidien.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Exemple de Kanban Chart&#34; loading=&#34;lazy&#34; src=&#34;https://i.imgur.com/UerKINV.jpeg#center&#34;&gt;
+&lt;em&gt;Exemple de &lt;strong&gt;Kanban Chart&lt;/strong&gt; pour la gestion d&amp;rsquo;un projet de dévellopement.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

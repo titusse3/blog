@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on renauxv</title>
-    <link>https://renauxv.fr/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on renauxv</description>
-    <generator>Hugo -- 0.146.3</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>fr-FR</language>
     <copyright>Renaux Verdiere Theo</copyright>
     <lastBuildDate>Tue, 10 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://renauxv.fr/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intelligence Artificielle</title>
-      <link>https://renauxv.fr/categories/intelligence-artificielle/</link>
+      <link>http://localhost:1313/categories/intelligence-artificielle/</link>
       <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/categories/intelligence-artificielle/</guid>
+      <guid>http://localhost:1313/categories/intelligence-artificielle/</guid>
       <description></description>
     </item>
     <item>
       <title>C</title>
-      <link>https://renauxv.fr/categories/c/</link>
+      <link>http://localhost:1313/categories/c/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/categories/c/</guid>
+      <guid>http://localhost:1313/categories/c/</guid>
       <description></description>
     </item>
     <item>
       <title>Raylib</title>
-      <link>https://renauxv.fr/categories/raylib/</link>
+      <link>http://localhost:1313/categories/raylib/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/categories/raylib/</guid>
+      <guid>http://localhost:1313/categories/raylib/</guid>
       <description></description>
     </item>
     <item>
       <title>Calcule Formelle</title>
-      <link>https://renauxv.fr/categories/calcule-formelle/</link>
+      <link>http://localhost:1313/categories/calcule-formelle/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/categories/calcule-formelle/</guid>
+      <guid>http://localhost:1313/categories/calcule-formelle/</guid>
       <description></description>
     </item>
     <item>
       <title>Cryptographie</title>
-      <link>https://renauxv.fr/categories/cryptographie/</link>
+      <link>http://localhost:1313/categories/cryptographie/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/categories/cryptographie/</guid>
+      <guid>http://localhost:1313/categories/cryptographie/</guid>
       <description></description>
     </item>
     <item>
       <title>Série</title>
-      <link>https://renauxv.fr/categories/s%C3%A9rie/</link>
+      <link>http://localhost:1313/categories/s%C3%A9rie/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/categories/s%C3%A9rie/</guid>
+      <guid>http://localhost:1313/categories/s%C3%A9rie/</guid>
       <description></description>
     </item>
     <item>
       <title>Informatique Quantique</title>
-      <link>https://renauxv.fr/categories/informatique-quantique/</link>
+      <link>http://localhost:1313/categories/informatique-quantique/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/categories/informatique-quantique/</guid>
+      <guid>http://localhost:1313/categories/informatique-quantique/</guid>
       <description></description>
     </item>
     <item>
       <title>Mesure</title>
-      <link>https://renauxv.fr/categories/mesure/</link>
+      <link>http://localhost:1313/categories/mesure/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/categories/mesure/</guid>
+      <guid>http://localhost:1313/categories/mesure/</guid>
       <description></description>
     </item>
   </channel>

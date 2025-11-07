@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>LFSR pratique | renauxv</title>
 <meta name="keywords" content="">
 <meta name="description" content="Cette note offre une brève introduction aux LFSR. Je me concentrerai sur les
 éléments essentiels pour en saisir le principe, sans entrer dans l&rsquo;ensemble des
 détails théoriques.">
 <meta name="author" content="">
-<link rel="canonical" href="https://renauxv.fr/notes/lfsr/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.579954d9aa9c58e0dc345e2e1d11231b738d9f08806b3af262235eeeda9dd040.css" integrity="sha256-V5lU2aqcWODcNF4uHREjG3ONnwiAazryYiNe7tqd0EA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://renauxv.fr/assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://renauxv.fr/assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="https://renauxv.fr/assets/favicon.ico">
-<link rel="apple-touch-icon" href="https://renauxv.fr/assets/favicon.ico">
-<link rel="mask-icon" href="https://renauxv.fr/assets/favicon.ico">
+<link rel="canonical" href="http://localhost:1313/notes/lfsr/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.18ec9370c9d7a17534cdedfe8086482e793908e3349601b4f54dbc3fb9f15ba5.css" integrity="sha256-GOyTcMnXoXU0ze3&#43;gIZILnk5COM0lgG09U28P7nxW6U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/assets/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/assets/favicon.ico">
+<link rel="mask-icon" href="http://localhost:1313/assets/favicon.ico">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://renauxv.fr/notes/lfsr/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/notes/lfsr/">
 <noscript>
     <style>
         #theme-toggle,
@@ -77,77 +77,13 @@ détails théoriques.">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js" integrity="sha384-J+9dG2KMoiR9hqcFao0IBLwxt6zpcyN68IgwzsCSkbreXUjmNVRhPFTssqdSGjwQ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-<meta property="og:url" content="https://renauxv.fr/notes/lfsr/">
-  <meta property="og:site_name" content="renauxv">
-  <meta property="og:title" content="LFSR pratique">
-  <meta property="og:description" content="Cette note offre une brève introduction aux LFSR. Je me concentrerai sur les éléments essentiels pour en saisir le principe, sans entrer dans l’ensemble des détails théoriques.">
-  <meta property="og:locale" content="fr-FR">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="notes">
-    <meta property="article:published_time" content="2025-04-07T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-04-07T00:00:00+00:00">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LFSR pratique">
-<meta name="twitter:description" content="Cette note offre une brève introduction aux LFSR. Je me concentrerai sur les
-éléments essentiels pour en saisir le principe, sans entrer dans l&rsquo;ensemble des
-détails théoriques.">
 
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Notes",
-      "item": "https://renauxv.fr/notes/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "LFSR pratique",
-      "item": "https://renauxv.fr/notes/lfsr/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "LFSR pratique",
-  "name": "LFSR pratique",
-  "description": "Cette note offre une brève introduction aux LFSR. Je me concentrerai sur les éléments essentiels pour en saisir le principe, sans entrer dans l\u0026rsquo;ensemble des détails théoriques.\n",
-  "keywords": [
-    
-  ],
-  "articleBody": "Cette note offre une brève introduction aux LFSR. Je me concentrerai sur les éléments essentiels pour en saisir le principe, sans entrer dans l’ensemble des détails théoriques.\nPour commencer, les LFSR sont des suites linéaires récurrentes employées en cryptographie afin de générer des nombres de façon pseudo-aléatoire. La manière la plus intuitive de les illustrer consiste à utiliser une analogie avec une boîte à œufs, comme le montre l’ilustration ci-dessous.\nLe principe est assez simple : les valeurs visibles correspondent à l’état d’initialisation. Pour obtenir la valeur suivante, il suffit de reproduire exactement la méthode illustrée dans l’animation ci-dessous.\nDans cet article, je m’intéresserai exclusivement aux LFSR opérant dans l’ensemble \\(\\mathbb{F}[X]_2^n\\), c’est-à-dire dans l’espace des nombres binaires (0 et 1). De plus, l’unique opération utilisée est le xor (souvent noté \\(\\oplus\\)), dont la table de vérité est la suivante :\nA B A \\(\\oplus\\) B 0 0 0 0 1 1 1 0 1 1 1 0 Puisque je me limite à cet ensemble, j’utiliserai le symbole + à la place de \\(\\oplus\\), tout en continuant à désigner l’opération comme étant le xor.\nRéprésentation sous forme de récurence linéaire Dans la suite de cet article, j’appellerai \\(s_n\\) la suite associée au LFSR illustré dans l’image. Il faut comprendre que les valeurs contenues dans la boîte correspondent aux termes initiaux de la suite. Ce n’est pas compliqué : il suffit de respecter l’ordre des termes, qui sont indexés à partir de 0, en partant de la droite vers la gauche. Ainsi, pour notre LFSR, les termes initiaux sont les suivants :\n\\[ \\begin{cases} s_0 = 1 \\\\ s_1 = 0 \\\\ s_2 = 0 \\\\ s_3 = 1 \\\\ s_4 = 1 \\\\ \\end{cases} \\]Une fois ces termes initiaux trouvé, il nous suffis de trouver les coefficients de l’expresion réccurente de notre suite \\(s_n\\). Tout d’abords, il faut savoir que l’expression sera de la forme :\n\\[ s_n = c_1 s_{n - 1} + c_2 s_{n - 2} + c_3 s_{n - 3} + c_4 s_{n - 4} + c_5 s_{n - 5} \\]Les termes \\(s_{n-i}\\) proviennent du fait que notre boîte à œufs contient cinq valeurs. Pour déterminer les coefficients \\(c_i\\), il suffit de repérer les indices des symboles \\(\\oplus\\) dans notre schéma, en les parcourant cette fois de gauche à droite (contrairement à l’indexation des \\(s_i\\)). Comme le montre le dessin, on obtient ainsi :\n\\[ \\begin{aligned} s_n \u0026= 0 \\times s_{n-1} + 1 \\times s_{n-2} + 0 \\times s_{n-3} + 0 \\times s_{n-4} + 1 \\times s_{n-5} \\\\ \u0026= s_{n-2} + s_{n-5}. \\end{aligned} \\]Cela signifie que pour calculer le terme suivant, on additionne (en appliquant l’opération xor) le quatrième et le premier terme.\nPériodicité Maintenant que nous avons saisi son fonctionnement, intéressons-nous à quelques-unes de ses propriétés. Pour reprendre l’exemple du LFSR présenté dans l’image, considérons que le nombre généré au rang \\(i\\) correspond à l’ensemble des valeurs affichées dans la boîte à œufs à ce moment. Ainsi, le premier nombre noté (au rang 0) est \\([1, 0, 0, 1, 1]\\), le deuxième (au rang\n\\([0, 0, 1, 1, 0]\\) (j’ai choisi de le représenter selon l’ordre des \\(s_i\\)), et ainsi de suite. On notera cette suite de valeur \\(e_i\\) On constate que cette suite évolue dans \\(\\mathbb{F}_2^{5}\\). Par ailleurs, puisque la suite \\(s_n\\) est infinie et que \\(\\mathbb{F}_2^{5}\\) est un ensemble fini (il n’existe qu’un nombre limité de mots binaires sur 5 bits), il est inévitable qu’à un certain rang, pour certains indices \\(n\\) et \\(n'\\), on ait :\n$$ s_n = s_{n'} $$Notre objectif étant de générer des nombres pseudo-aléatoires, il est important de connaître la période de cette suite pour déterminer si le LFSR est suffisamment performant (une période très longue étant souhaitable). Pour cela, nous utiliserons l’algorithme de Floyd, plus connu sous le nom de l’algorithme du lièvre et de la tortue.\nAlgorithme de Floyd Cet algorithme se déroule en deux étapes :\nTout d’abord, on cherche un rang \\(i \u003e 0\\) tel que \\(e_i = e_{2i}\\), où \\(e_i\\) représente le nombre généré par le LFSR au rang \\(i\\). Pour ce faire, il suffit de faire progresser le LFSR et de comparer les valeurs obtenues. Une fois cette égalité identifiée, on enregistre ce rang sous le nom \\(n\\).\nEnsuite, on répète la procédure en recherchant une égalité similaire pour \\(e_{i+1} = e_{2(i+1)}\\) avec \\(i \u003e n\\). Dès que cette condition est remplie, on note le rang \\(i + 1\\) sous le nom \\(n_1\\).\nLa période de la suite, notée \\(\\lambda\\), est alors donnée par\n\\[ \\lambda = n_1 - n. \\] Note On ne prend pas en compte \\(e_0\\), le nombre généré par les valeurs initiales du LFSR avant toute opération. Essayer de trouver la période associée au LFSR défini par la suite \\(s_n\\) :\n\\[ \\begin{cases} s_0 = 1 \\\\ s_1 = 0 \\\\ s_2 = 0 \\\\ s_3 = 1 \\\\ s_n = s_{n-2} + s_{n-4}\\\\ \\end{cases} \\] Correction Comme évoqué ci-dessus, il suffit de calculer les nombres générés par le LFSR jusqu’à obtenir les égalités \\(e_i = e_{2i}\\) et \\(e_{i + 1} = e_{2(i + 1)}\\).\nPour ce faire :\nDans cette image, les nombres sont écrits sous forme de vecteurs, avec \\(s_0\\) représentant le bit le plus haut.\nOn trouve ainsi que \\(n = 6\\) et \\(n_1 = 12\\), d’où la période du LFSR est \\(\\lambda = 6\\).\nUn bon moyen de s’exercer est d’utiliser le site dcode, qui permet de déterminer la période d’un LFSR que vous aurez vous-même conçu. Veillez toutefois à bien prendre en compte l’indexation des coefficients, qui diffère de celle utilisée dans cette note.\nNous avons ainsi calculé la période. Cependant, certaines suites ne commencent pas directement par leur cycle périodique complet ; il peut exister un chemin préliminaire avant d’entrer dans le cycle. On appelle cette phase la queue de la suite. Pour calculer la longueur de la queue, notée \\(\\mu\\), il suffit de réappliquer la première étape de l’algorithme de Floyd, mais cette fois-ci en recherchant \\(e_i = e_{i + \\lambda}\\), en commençant à \\(i = 0\\) (comme précédemment).\nEssayer maintenant de calculer \\(\\mu\\) de la suite donner précédament.\nCorrection Il suffit de reprendre le calcule des \\(e_i\\) précédent, on remarque alors que \\(e_0 = e_{0 + 6}\\) et que donc \\(\\mu = 0\\).\nPériode maximale Une propriété essentielle et relativement facile à comprendre est la valeur de la période maximale d’un LFSR. Si notre LFSR prend des valeurs dans \\(\\mathbb{F}_2^n\\), cela signifie que sa période couvre l’ensemble de \\(\\mathbb{F}_2^n\\) (à l’exception du vecteur nul, qui est rejeté puisqu’il correspond à un élément absorbant).\nAinsi, la période maximale est : \\[ |\\mathbb{F}_2^n| - 1 = 2^n - 1. \\]Représentation sous forme matricielle Tout comme on peut représenter notre LFSR sous forme de suite linéaire, il est également possible de l’exprimer sous forme de matrice.\nPour entrer dans les détails, il convient de distinguer deux matrices. La première, notée \\(S\\), regroupe les \\(s_i\\) :\n\\[ S = \\begin{pmatrix} s_0 \\\\ s_1 \\\\ s_2 \\\\ \\vdots \\\\ s_{l-1} \\end{pmatrix} \\]où \\(l\\) correspond au nombre de valeurs présentes dans notre boîte à œufs.\nLa deuxième matrice, notée \\(M\\), représente la logique de rétroaction de notre LFSR. Il s’agit d’une matrice carrée de dimension \\(l \\times l\\) de la forme suivante :\n\\[ M = \\begin{pmatrix} 0 \u0026 1 \u0026 0 \u0026 \\cdots \u0026 0 \\\\ 0 \u0026 0 \u0026 1 \u0026 \\cdots \u0026 0 \\\\ \\vdots \u0026 \\vdots \u0026 \\ddots \u0026 \\ddots \u0026 \\vdots \\\\ 0 \u0026 0 \u0026 \\cdots \u0026 0 \u0026 1 \\\\ c_l \u0026 c_{l - 1} \u0026 \\cdots \u0026 c_2 \u0026 c_1 \\end{pmatrix} \\]Pour se convaincre de cette écriture, calculons \\(M \\times S\\) :\n\\[ M \\times S = \\begin{pmatrix} s_1 \\\\ s_2 \\\\ \\vdots \\\\ s_{l-2}\\\\ s_{l-1}\\\\ c_ls_0 + c_{l-1}s_1 + \\cdots + c_1s_{l - 1} \\end{pmatrix} \\]On retrouve ainsi le décalage qui fait disparaître \\(s_0\\) et le calcul de \\(s_l\\) s’effectue par une combinaison linéaire des \\(c_i\\).\nNote On peut remarquer que, pour calculer les \\(e_i\\) utilisés pour déterminer la période, il suffit de poser : \\[ e_0 = S, \\; e_n = M\\times e_{n - 1}. \\] Périodicité On dit qu’une suite est périodique si et seulement si \\(\\mu = 0\\). Dans le cas d’un LFSR, cela équivaut à dire que \\(c_l \\neq 0\\), où \\(l\\) représente le nombre de valeurs de notre boîte à œufs.\nNote Cette proposition se démontre à l’aide de la représentation matricielle des LFSR, mais cette démonstration dépasse le cadre de cette note. Représentation sous forme de polynôme L’existence d’une représentation sous forme de suite d’un LFSR implique donc forcément l’existence d’une représentation sous de série et donc dans certain cas de polynôme.\nPolynôme de rétroaction On définit le polynôme de rétroaction d’un LFSR de la manière suivante :\n\\[ P(X) = 1 - \\sum_{i = 1}^l c_i x^i \\] Note Puisque l’on travaille dans \\(\\mathbb{F}_2\\), l’opération de soustraction (-) est en réalité équivalente à l’addition (+). Série génératrice ordinaire Rappelons que la série génératrice ordinaire associée à une suite \\(s_n\\) est définie par :\n\\[ S(X) = \\sum_{n \\geq 0} s_n x^n \\] Note Petit rappel sur les séries : \\(S\\) est inversible si et seulement si \\(s_0 = 0\\). Nous disposons des deux propriétés suivantes concernant \\(s_n\\) :\nLa suite \\(s_n\\) est un LFSR si et seulement si sa série génératrice peut s’écrire sous la forme \\[ S(X) = \\dfrac{P_1(X)}{P_2(X)}, \\] où \\(P_1(X)\\) et \\(P_2(X)\\) sont deux polynômes.\nSi \\(s_n\\) est un LFSR, alors il existe une écriture de la forme \\[ S(X) = \\dfrac{Q(X)}{P(X)}, \\] où \\(P(X)\\) est le polynôme de rétroaction et \\(Q(X)\\) est un polynôme tel que \\(\\deg Q(X) \u003c l\\) (rappelons que \\(l\\) correspond au nombre de valeurs dans notre boîte à œufs).\nCalcul de \\(Q(X)\\) Sans entrer dans les détails de démonstration, il est possible de déterminer \\(Q(X)\\) à l’aide de la formule suivante :\n\\[ Q(X) = \\sum_{i = 0}^{l - 1} s_i x^i - \\sum_{n = 1}^{l - 1} \\sum_{\\substack{i + j = n\\\\i \\geq 0\\\\j \\geq 1}} s_i c_j x^n \\]Cette formule peut sembler complexe au premier abord, mais elle est en réalité assez accessible. Prenons un exemple ensemble en reprenant le premier LFSR que nous avons examiné :\nOn dispose alors des informations suivantes :\n\\(i\\) 0 1 2 3 4 5 \\(s_i\\) 1 0 0 1 1 \\(c_i\\) 0 1 0 0 1 On peut aisément calculer la partie gauche de la formule, c’est-à-dire la somme\n\\[ \\sum_{i = 0}^{l - 1} s_i x^i. \\]Dans notre exemple, cette somme se simplifie en :\n\\[ 1 + x^3 + x^4. \\]Pour la partie droite, il faut observer que, pour chaque entier \\(n\\) allant de 1 à \\(l - 1\\), on doit sommer les produits \\(s_i \\times c_j\\) pour tous les couples d’indices tels que \\(i + j = n\\). Le résultat de cette somme correspond au coefficient de \\(x^n\\).\nExaminons cela pour notre exemple :\n\\(n\\) Expression Résultat 1 \\(s_0c_1\\) \\(0\\) 2 \\(s_0c_2 + s_1c_1\\) \\(1 + 0 = 1\\) 3 \\(s_0c_3 + s_1c_2 + s_2c_1\\) \\(0 + 0 + 0 = 0\\) 4 \\(s_0c_4 + s_1c_3 + s_2c_2 + s_3c_1\\) \\(0 + 0 + 0 + 0 = 0\\) La somme de droite s’exprime donc comme :\n\\[ x^2. \\]En combinant les deux parties — en rappelant que dans \\(\\mathbb{F}_2\\) la soustraction est équivalente à l’addition — on obtient :\n\\[ Q(X) = 1 + x^3 + x^4 + x^2 = 1 + x^2 + x^3 + x^4. \\]",
-  "wordCount" : "1907",
-  "inLanguage": "en",
-  "datePublished": "2025-04-07T00:00:00Z",
-  "dateModified": "2025-04-07T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://renauxv.fr/notes/lfsr/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "renauxv",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://renauxv.fr/assets/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://renauxv.fr/" accesskey="h" title="renauxv (Alt + H)">renauxv</a>
+            <a href="http://localhost:1313/" accesskey="h" title="renauxv (Alt + H)">renauxv</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -173,22 +109,22 @@ détails théoriques.">
         </div>
         <ul id="menu">
             <li>
-                <a href="https://renauxv.fr/posts" title="Posts">
+                <a href="http://localhost:1313/posts" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://renauxv.fr/notes" title="Notes">
+                <a href="http://localhost:1313/notes" title="Notes">
                     <span>Notes</span>
                 </a>
             </li>
             <li>
-                <a href="https://renauxv.fr/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="https://renauxv.fr/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -199,7 +135,7 @@ détails théoriques.">
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://renauxv.fr/">Home</a>&nbsp;»&nbsp;<a href="https://renauxv.fr/notes/">Notes</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/notes/">Notes</a></div>
     <h1 class="post-title entry-hint-parent">
       LFSR pratique
     </h1>
@@ -600,7 +536,7 @@ est définie par :</p>
 
   <div class="prose pl-8 text-inherit marker:text-inherit">
     Petit rappel sur les séries : \(S\) est <strong>inversible</strong> si et seulement si
-\(s_0 = 0\).
+\(s_0 = 1\).
   </div>
 </figure>
 

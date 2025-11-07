@@ -304,7 +304,7 @@ est définie par :
 
 {{< admonition >}}
 Petit rappel sur les séries : \(S\) est **inversible** si et seulement si 
-\(s_0 = 0\).
+\(s_0 = 1\).
 {{< /admonition >}}
 
 Nous disposons des deux propriétés suivantes concernant \(s_n\) :

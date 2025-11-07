@@ -2,81 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on renauxv</title>
-    <link>https://renauxv.fr/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on renauxv</description>
-    <generator>Hugo -- 0.146.3</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>fr-FR</language>
     <copyright>Renaux Verdiere Theo</copyright>
     <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://renauxv.fr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automatisation</title>
-      <link>https://renauxv.fr/tags/automatisation/</link>
+      <link>http://localhost:1313/tags/automatisation/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/tags/automatisation/</guid>
+      <guid>http://localhost:1313/tags/automatisation/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>https://renauxv.fr/tags/python/</link>
+      <link>http://localhost:1313/tags/python/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/tags/python/</guid>
+      <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>IA</title>
-      <link>https://renauxv.fr/tags/ia/</link>
+      <link>http://localhost:1313/tags/ia/</link>
       <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/tags/ia/</guid>
+      <guid>http://localhost:1313/tags/ia/</guid>
       <description></description>
     </item>
     <item>
       <title>LLM</title>
-      <link>https://renauxv.fr/tags/llm/</link>
+      <link>http://localhost:1313/tags/llm/</link>
       <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/tags/llm/</guid>
+      <guid>http://localhost:1313/tags/llm/</guid>
       <description></description>
     </item>
     <item>
       <title>RAG</title>
-      <link>https://renauxv.fr/tags/rag/</link>
+      <link>http://localhost:1313/tags/rag/</link>
       <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/tags/rag/</guid>
+      <guid>http://localhost:1313/tags/rag/</guid>
       <description></description>
     </item>
     <item>
       <title>C</title>
-      <link>https://renauxv.fr/tags/c/</link>
+      <link>http://localhost:1313/tags/c/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/tags/c/</guid>
+      <guid>http://localhost:1313/tags/c/</guid>
       <description></description>
     </item>
     <item>
       <title>Optimisation</title>
-      <link>https://renauxv.fr/tags/optimisation/</link>
+      <link>http://localhost:1313/tags/optimisation/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/tags/optimisation/</guid>
+      <guid>http://localhost:1313/tags/optimisation/</guid>
       <description></description>
     </item>
     <item>
       <title>Raylib</title>
-      <link>https://renauxv.fr/tags/raylib/</link>
+      <link>http://localhost:1313/tags/raylib/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/tags/raylib/</guid>
+      <guid>http://localhost:1313/tags/raylib/</guid>
       <description></description>
     </item>
     <item>
       <title>Commande</title>
-      <link>https://renauxv.fr/tags/commande/</link>
+      <link>http://localhost:1313/tags/commande/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/tags/commande/</guid>
+      <guid>http://localhost:1313/tags/commande/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>https://renauxv.fr/tags/linux/</link>
+      <link>http://localhost:1313/tags/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://renauxv.fr/tags/linux/</guid>
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
   </channel>
