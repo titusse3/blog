@@ -68,3 +68,9 @@ chmod -R ... # applique la commande de manière récursive
 ```
 find . -type f -exec cmd {} \; # exécute cmd sur tous les fichiers de l'arborescence
 ```
+
+## Sync dossier local et distant
+
+```
+rsync -avz user@remote:dossier_distant dossier_local # sync dossier distant vers local
+```
