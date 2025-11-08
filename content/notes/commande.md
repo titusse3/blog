@@ -42,3 +42,29 @@ git checkout -b <nom de la branche> # premet de créer et de changer de branche
 git push origin <nom de la branche> # permet de push la nouvelle branche
 git branch -a # liste de toutes les branches
 ```
+
+## Droit linux
+
+```
+chmod [catégorie]-[droit] fichier_ou_dossier
+```
+
+- catégorie :
+  - `u` = user (propriétaire)
+  - `g` = group (groupe)
+  - `o` = others (autres)
+  - `a` = all (tous les trois)
+- droit :
+  - `r` = lecture (read)
+  - `w` = écriture (write)
+  - `x` = exécution (execute)
+
+```
+chmod -R ... # applique la commande de manière récursive
+```
+
+## Execution de commande toute l'arborescence
+
+```
+find . -type f -exec cmd {} \; # exécute cmd sur tous les fichiers de l'arborescence
+```

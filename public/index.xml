@@ -22,16 +22,6 @@ Cet article présente la mise en place d’un système d’&lt;strong&gt;extract
 script &lt;em&gt;Python&lt;/em&gt;. Ce projet met en œuvre des techniques de &lt;strong&gt;traitement   d’image&lt;/strong&gt; et d’&lt;strong&gt;extraction de texte&lt;/strong&gt;, tout en gardant à l’esprit la  nécessité de concevoir une solution légère et peu consommatrice en ressources.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Todo self host</title>
-      <link>http://localhost:1313/notes/todo_self_host/</link>
-      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/todo_self_host/</guid>
-      <description>&lt;h1 id=&#34;kanban-chart&#34;&gt;Kanban Chart&lt;/h1&gt;
-&lt;p&gt;J’ai eu la chance d’assister à une conférence sur la gestion du temps, organisée pour les étudiants membres d’une association. Parmi les outils et conseils présentés, celui qui m’a le plus marqué, c’est la mise en place d’un &lt;strong&gt;Kanban Board&lt;/strong&gt;. Une méthode visuelle pour organiser et fragmenter ses tâches, suivre sa progression et rester motivé au quotidien.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Exemple de Kanban Chart&#34; loading=&#34;lazy&#34; src=&#34;https://i.imgur.com/UerKINV.jpeg#center&#34;&gt;
-&lt;em&gt;Exemple de &lt;strong&gt;Kanban Chart&lt;/strong&gt; pour la gestion d&amp;rsquo;un projet de dévellopement.&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Génération Augmentée de récupération (RAG)</title>
       <link>http://localhost:1313/posts/rag_definition/</link>
       <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
