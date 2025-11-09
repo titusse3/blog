@@ -74,3 +74,9 @@ find . -type f -exec cmd {} \; # exécute cmd sur tous les fichiers de l'arbores
 ```
 rsync -avz user@remote:dossier_distant dossier_local # sync dossier distant vers local
 ```
+
+## Docker
+
+```
+docker compose down --rmi all --volumes # stop and remove containers along with the related networks, images and volumes
+```
