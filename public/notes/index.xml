@@ -14,7 +14,7 @@
       <link>http://localhost:1313/notes/automate_algo/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/notes/automate_algo/</guid>
-      <description>&lt;h1 id=&#34;calcule-des-résiduels&#34;&gt;Calcule des résiduels&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;calcule-des-résiduels&#34;&gt;Calcule des résiduels&lt;/h2&gt;
 &lt;p&gt;Soit \(L\) un langage &lt;em&gt;Rationnel&lt;/em&gt; sur un alphabet \(\Sigma\), donner par une expression rationnelle \(E\) tel que \(L = L(E)\).&lt;/p&gt;
 &lt;figure
   role=&#34;note&#34;

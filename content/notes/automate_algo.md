@@ -6,7 +6,7 @@ ShowToc: true
 math: true
 ---
 
-# Calcule des résiduels
+## Calcule des résiduels
 
 Soit \(L\) un langage *Rationnel* sur un alphabet \(\Sigma\), donner par une expression rationnelle \(E\) tel que \(L = L(E)\).
 
@@ -32,10 +32,12 @@ On peut calculer le résiduel de \(L\) par rapport à \(u\) en utilisant les rè
 Remarque, on a que : \(u.u^* = u^+\)
 {{< /admonition >}}
 
-# Algorithmes de Glushkov
+## Algorithme d'émondage
 
+## Algorithme de Standardisation
 
-- Determinisation
-- Minimisaton
-- Standardisation
-- émondage
+## L'algorithme de Glushkov
+
+## Algorithme de déterminisation
+
+## Algorithme de minimisation
