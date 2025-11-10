@@ -184,6 +184,11 @@ gpg —cardf-edit # ouvre l&#39;interface de gestion yubikey
 <pre tabindex="0"><code>git checkout -b &lt;nom de la branche&gt; # premet de créer et de changer de branche
 git push origin &lt;nom de la branche&gt; # permet de push la nouvelle branche
 git branch -a # liste de toutes les branches
+
+## GPG avec git
+git config --global user.signingkey &lt;ID de la clé&gt; # configure la clé gpg pour signer les commits
+git config --global commit.gpgsign true # active la signature gpg pour les commits
+git config --global tag.gpgsign true # active la signature gpg pour les tags
 </code></pre><h2 id="droit-linux">Droit linux<a hidden class="anchor" aria-hidden="true" href="#droit-linux">#</a></h2>
 <pre tabindex="0"><code>chmod [catégorie]-[droit] fichier_ou_dossier
 </code></pre><ul>
