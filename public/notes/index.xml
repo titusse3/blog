@@ -7,8 +7,56 @@
     <generator>Hugo -- 0.152.2</generator>
     <language>fr-FR</language>
     <copyright>Renaux Verdiere Theo</copyright>
-    <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithme sur les automates et langages</title>
+      <link>http://localhost:1313/notes/automate_algo/</link>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/automate_algo/</guid>
+      <description>&lt;h1 id=&#34;calcule-des-résiduels&#34;&gt;Calcule des résiduels&lt;/h1&gt;
+&lt;p&gt;Soit \(L\) un langage &lt;em&gt;Rationnel&lt;/em&gt; sur un alphabet \(\Sigma\), donner par une expression rationnelle \(E\) tel que \(L = L(E)\).&lt;/p&gt;
+&lt;figure
+  role=&#34;note&#34;
+  id=&#34;admonition-00&#34;
+  aria-labelledby=&#34;admonition-caption-00&#34;
+  class=&#34;admonition note  not-prose&#34;
+&gt;
+  &lt;div class=&#34;flex items-center space-x-2 pb-2 font-semibold&#34;&gt;
+    &lt;svg
+      xmlns=&#34;http://www.w3.org/2000/svg&#34;
+      width=&#34;24&#34;
+      height=&#34;24&#34;
+      fill=&#34;none&#34;
+      stroke=&#34;currentColor&#34;
+      stroke-linecap=&#34;round&#34;
+      stroke-linejoin=&#34;round&#34;
+      stroke-width=&#34;2&#34;
+      class=&#34;lucide lucide-info&#34;
+    &gt;
+      &lt;circle cx=&#34;12&#34; cy=&#34;12&#34; r=&#34;10&#34; /&gt;
+      &lt;path d=&#34;M12 16v-4M12 8h.01&#34; /&gt;
+    &lt;/svg&gt;
+
+    &lt;figcaption id=&#34;admonition-caption-00&#34;&gt;
+        Note
+    &lt;/figcaption&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&#34;prose pl-8 text-inherit marker:text-inherit&#34;&gt;
+    &lt;p&gt;Une expression &lt;strong&gt;rationnelle&lt;/strong&gt; est définie par une grammaire de la forme :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;\(E_1 + E_2\)&lt;/li&gt;
+&lt;li&gt;\(E_1 \cdot E_2\)&lt;/li&gt;
+&lt;li&gt;\(E_1^*\)&lt;/li&gt;
+&lt;li&gt;\(\emptyset \; | \; \epsilon \; | \; a\) avec \(a \in \Sigma\)&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Le résiduel de \(L\) par rapport à un mot \(u \in \Sigma^*\) est défini par :
+&lt;/p&gt;</description>
+    </item>
     <item>
       <title>LFSR pratique</title>
       <link>http://localhost:1313/notes/lfsr/</link>

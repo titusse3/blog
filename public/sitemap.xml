@@ -86,6 +86,8 @@
     <loc>http://localhost:1313/posts/parallaxe_raylib/</loc>
     <lastmod>2025-02-24T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/notes/automate_algo/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/commande/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/linux/</loc>
@@ -93,5 +95,9 @@
     <loc>http://localhost:1313/notes/commande/</loc>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/th%C3%A9orerie-des-automates/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/th%C3%A9orie-des-langages/</loc>
   </url>
 </urlset>

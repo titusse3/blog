@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Théorerie Des Automates on renauxv</title>
+    <link>http://localhost:1313/tags/th%C3%A9orerie-des-automates/</link>
+    <description>Recent content in Théorerie Des Automates on renauxv</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>fr-FR</language>
+    <copyright>Renaux Verdiere Theo</copyright>
+    <atom:link href="http://localhost:1313/tags/th%C3%A9orerie-des-automates/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithme sur les automates et langages</title>
+      <link>http://localhost:1313/notes/automate_algo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/automate_algo/</guid>
+      <description>&lt;h1 id=&#34;calcule-des-résiduels&#34;&gt;Calcule des résiduels&lt;/h1&gt;
+&lt;p&gt;Soit \(L\)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Glushkov&lt;/li&gt;
+&lt;li&gt;Determinisation&lt;/li&gt;
+&lt;li&gt;Minimisaton&lt;/li&gt;
+&lt;li&gt;Standardisation&lt;/li&gt;
+&lt;li&gt;émondage&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
