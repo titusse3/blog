@@ -33,6 +33,8 @@ ip addr # affiche les interfaces réseau
 
 ```
 gpg --list-key # liste des clés
+gpg —cardf-edit # ouvre l'interface de gestion yubikey
+  > fetch # importe la clé depuis un serveur de clé (keys.openpgp.org)
 ```
 
 ## Git
