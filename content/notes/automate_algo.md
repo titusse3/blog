@@ -46,7 +46,7 @@ L'algorithme suit les étapes suivantes :
 3. \(\delta' = \delta \cup \{(i, a, q) | \exists q_i \in I, (q_i, a, q) \in \delta\}\)
 
 ### Animation d'exemple
-![Gif d'exemple de Standardisation](https://upload.wikimedia.org/wikipedia/commons/3/3a/Standardization_of_NFA.gif)
+![Gif d'exemple de Standardisation](https://i.imgur.com/n18oPqK.gif)
 
 ## Algorithme d'émondage
 
