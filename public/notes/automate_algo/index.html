@@ -163,7 +163,7 @@ Le résiduel de \(L\) par rapport à un mot \(u \in \Sigma^*\) est défini par :
     <h1 class="post-title entry-hint-parent">
       Algorithme sur les automates et langages
     </h1>
-    <div class="post-meta"><span title='2025-11-10 00:00:00 +0000 UTC'>November 10, 2025</span>&nbsp;·&nbsp;<span>1 min</span>
+    <div class="post-meta"><span title='2025-11-10 00:00:00 +0000 UTC'>November 10, 2025</span>&nbsp;·&nbsp;<span>2 min</span>
 
 </div>
   </header> <div class="toc">
@@ -176,9 +176,13 @@ Le résiduel de \(L\) par rapport à un mot \(u \in \Sigma^*\) est défini par :
                 <li>
                     <a href="#calcule-des-r%c3%a9siduels" aria-label="Calcule des résiduels">Calcule des résiduels</a></li>
                 <li>
-                    <a href="#algorithme-d%c3%a9mondage" aria-label="Algorithme d&rsquo;émondage">Algorithme d&rsquo;émondage</a></li>
+                    <a href="#algorithme-de-standardisation" aria-label="Algorithme de Standardisation">Algorithme de Standardisation</a><ul>
+                        
                 <li>
-                    <a href="#algorithme-de-standardisation" aria-label="Algorithme de Standardisation">Algorithme de Standardisation</a></li>
+                    <a href="#animation-dexemple" aria-label="Animation d&rsquo;exemple">Animation d&rsquo;exemple</a></li></ul>
+                </li>
+                <li>
+                    <a href="#algorithme-d%c3%a9mondage" aria-label="Algorithme d&rsquo;émondage">Algorithme d&rsquo;émondage</a></li>
                 <li>
                     <a href="#lalgorithme-de-glushkov" aria-label="L&rsquo;algorithme de Glushkov">L&rsquo;algorithme de Glushkov</a></li>
                 <li>
@@ -273,8 +277,22 @@ Le résiduel de \(L\) par rapport à un mot \(u \in \Sigma^*\) est défini par :
   </div>
 </figure>
 
-<h2 id="algorithme-démondage">Algorithme d&rsquo;émondage<a hidden class="anchor" aria-hidden="true" href="#algorithme-démondage">#</a></h2>
 <h2 id="algorithme-de-standardisation">Algorithme de Standardisation<a hidden class="anchor" aria-hidden="true" href="#algorithme-de-standardisation">#</a></h2>
+<p>Soit \(A = (\Sigma, Q, I, F, \delta)\) un automate fini non déterministe.</p>
+<p>L&rsquo;algorithme de <strong>standardisation</strong> transforme \(A\) en un automate standard
+</p>
+\[
+  A' = (\Sigma, Q \cup \{i\}, \{i\}, F', \delta')
+\]<p>
+L&rsquo;algorithme suit les étapes suivantes :</p>
+<ol>
+<li>Créer un nouvel état initial \(i\),</li>
+<li>\(F' = \begin{cases} F \text{ si } I \cap F = \emptyset \\ F \cup \{i\} \text{ sinon} \end{cases}\)</li>
+<li>\(\delta' = \delta \cup \{(i, a, q) | \exists q_i \in I, (q_i, a, q) \in \delta\}\)</li>
+</ol>
+<h3 id="animation-dexemple">Animation d&rsquo;exemple<a hidden class="anchor" aria-hidden="true" href="#animation-dexemple">#</a></h3>
+<p><img alt="Gif d&rsquo;exemple de Standardisation" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Standardization_of_NFA.gif"></p>
+<h2 id="algorithme-démondage">Algorithme d&rsquo;émondage<a hidden class="anchor" aria-hidden="true" href="#algorithme-démondage">#</a></h2>
 <h2 id="lalgorithme-de-glushkov">L&rsquo;algorithme de Glushkov<a hidden class="anchor" aria-hidden="true" href="#lalgorithme-de-glushkov">#</a></h2>
 <h2 id="algorithme-de-déterminisation">Algorithme de déterminisation<a hidden class="anchor" aria-hidden="true" href="#algorithme-de-déterminisation">#</a></h2>
 <h2 id="algorithme-de-minimisation">Algorithme de minimisation<a hidden class="anchor" aria-hidden="true" href="#algorithme-de-minimisation">#</a></h2>

@@ -32,9 +32,23 @@ On peut calculer le résiduel de \(L\) par rapport à \(u\) en utilisant les rè
 Remarque, on a que : \(u.u^* = u^+\)
 {{< /admonition >}}
 
-## Algorithme d'émondage
-
 ## Algorithme de Standardisation
+
+Soit \(A = (\Sigma, Q, I, F, \delta)\) un automate fini non déterministe. 
+
+L'algorithme de **standardisation** transforme \(A\) en un automate standard 
+\[
+  A' = (\Sigma, Q \cup \{i\}, \{i\}, F', \delta')
+\]
+L'algorithme suit les étapes suivantes :
+1. Créer un nouvel état initial \(i\),
+2. \(F' = \begin{cases} F \text{ si } I \cap F = \emptyset \\ F \cup \{i\} \text{ sinon} \end{cases}\)
+3. \(\delta' = \delta \cup \{(i, a, q) | \exists q_i \in I, (q_i, a, q) \in \delta\}\)
+
+### Animation d'exemple
+![Gif d'exemple de Standardisation](https://upload.wikimedia.org/wikipedia/commons/3/3a/Standardization_of_NFA.gif)
+
+## Algorithme d'émondage
 
 ## L'algorithme de Glushkov
 
