@@ -7,33 +7,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Algorithme sur les automates et langages | renauxv</title>
 <meta name="keywords" content="Théorerie des automates, Théorie des langages">
-<meta name="description" content="Calcule des résiduels
-Soit \(L\) un langage Rationnel sur un alphabet \(\Sigma\), donner par une expression rationnelle \(E\) tel que \(L = L(E)\).
-
-  
-    
-      
-      
-    
-
-    
-        Note
-    
-  
-
-  
-    Une expression rationnelle est définie par une grammaire de la forme :
-
-\(E_1 &#43; E_2\)
-\(E_1 \cdot E_2\)
-\(E_1^*\)
-\(\emptyset \; | \; \epsilon \; | \; a\) avec \(a \in \Sigma\)
-
-  
-
-
-Le résiduel de \(L\) par rapport à un mot \(u \in \Sigma^*\) est défini par :
-">
+<meta name="description" content="Présentation des principaux algorithmes utilisés en théorie des langages ainsi qu&rsquo;en théorie des automates.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/notes/automate_algo/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.18ec9370c9d7a17534cdedfe8086482e793908e3349601b4f54dbc3fb9f15ba5.css" integrity="sha256-GOyTcMnXoXU0ze3&#43;gIZILnk5COM0lgG09U28P7nxW6U=" rel="preload stylesheet" as="style">
@@ -195,7 +169,8 @@ Le résiduel de \(L\) par rapport à un mot \(u \in \Sigma^*\) est défini par :
     </details>
 </div>
 
-  <div class="post-content"><h2 id="calcule-des-résiduels">Calcule des résiduels<a hidden class="anchor" aria-hidden="true" href="#calcule-des-résiduels">#</a></h2>
+  <div class="post-content"><p>Présentation des principaux algorithmes utilisés en théorie des langages ainsi qu&rsquo;en théorie des automates.</p>
+<h2 id="calcule-des-résiduels">Calcule des résiduels<a hidden class="anchor" aria-hidden="true" href="#calcule-des-résiduels">#</a></h2>
 <p>Soit \(L\) un langage <em>Rationnel</em> sur un alphabet \(\Sigma\), donner par une expression rationnelle \(E\) tel que \(L = L(E)\).</p>
 <figure
   role="note"
@@ -277,6 +252,7 @@ Le résiduel de \(L\) par rapport à un mot \(u \in \Sigma^*\) est défini par :
   </div>
 </figure>
 
+<hr>
 <h2 id="algorithme-de-standardisation">Algorithme de Standardisation<a hidden class="anchor" aria-hidden="true" href="#algorithme-de-standardisation">#</a></h2>
 <p>Soit \(A = (\Sigma, Q, I, F, \delta)\) un automate fini non déterministe.</p>
 <p>L&rsquo;algorithme de <strong>standardisation</strong> transforme \(A\) en un automate standard
@@ -292,11 +268,11 @@ L&rsquo;algorithme suit les étapes suivantes :</p>
 </ol>
 <h3 id="animation-dexemple">Animation d&rsquo;exemple<a hidden class="anchor" aria-hidden="true" href="#animation-dexemple">#</a></h3>
 <p><img alt="Gif d&rsquo;exemple de Standardisation" loading="lazy" src="https://i.imgur.com/n18oPqK.gif"></p>
+<hr>
 <h2 id="algorithme-démondage">Algorithme d&rsquo;émondage<a hidden class="anchor" aria-hidden="true" href="#algorithme-démondage">#</a></h2>
 <h2 id="lalgorithme-de-glushkov">L&rsquo;algorithme de Glushkov<a hidden class="anchor" aria-hidden="true" href="#lalgorithme-de-glushkov">#</a></h2>
 <h2 id="algorithme-de-déterminisation">Algorithme de déterminisation<a hidden class="anchor" aria-hidden="true" href="#algorithme-de-déterminisation">#</a></h2>
 <h2 id="algorithme-de-minimisation">Algorithme de minimisation<a hidden class="anchor" aria-hidden="true" href="#algorithme-de-minimisation">#</a></h2>
-
 
   </div>
 

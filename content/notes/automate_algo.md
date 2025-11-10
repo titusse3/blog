@@ -6,6 +6,10 @@ ShowToc: true
 math: true
 ---
 
+Présentation des principaux algorithmes utilisés en théorie des langages ainsi qu'en théorie des automates.
+
+<!--more-->
+
 ## Calcule des résiduels
 
 Soit \(L\) un langage *Rationnel* sur un alphabet \(\Sigma\), donner par une expression rationnelle \(E\) tel que \(L = L(E)\).
@@ -32,6 +36,8 @@ On peut calculer le résiduel de \(L\) par rapport à \(u\) en utilisant les rè
 Remarque, on a que : \(u.u^* = u^+\)
 {{< /admonition >}}
 
+---
+
 ## Algorithme de Standardisation
 
 Soit \(A = (\Sigma, Q, I, F, \delta)\) un automate fini non déterministe. 
@@ -47,6 +53,8 @@ L'algorithme suit les étapes suivantes :
 
 ### Animation d'exemple
 ![Gif d'exemple de Standardisation](https://i.imgur.com/n18oPqK.gif)
+
+---
 
 ## Algorithme d'émondage
 
