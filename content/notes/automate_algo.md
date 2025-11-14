@@ -10,6 +10,8 @@ Présentation des principaux algorithmes utilisés en théorie des langages ains
 
 <!--more-->
 
+---
+
 ## Calcule des résiduels
 
 Soit \(L\) un langage *Rationnel* sur un alphabet \(\Sigma\), donner par une expression rationnelle \(E\) tel que \(L = L(E)\).
@@ -58,7 +60,32 @@ L'algorithme suit les étapes suivantes :
 
 ## Algorithme d'émondage
 
+---
+
 ## L'algorithme de Glushkov
+
+Soit \(E\) une expression rationnelle sur un alphabet \(\Sigma\). 
+
+L'algorithme de **Glushkov** construit un automate fini non déterministe \[A = (\Sigma, Q, I, F, \delta) \text{ tel que } L(A) = L(E)\]
+
+| Expression \(E\) | \(Null(E)\) | \(First(E)\) | \(Last(E)\) |
+|---|:---:|:---:|:---:|
+| \(\emptyset\) | \(\varnothing\) | \(\varnothing\) | \(\varnothing\) |
+| \(\epsilon\) | \(\{\epsilon\}\) | \(\varnothing\) | \(\varnothing\) |
+| \(a \in \Sigma\) | \(\varnothing\) | \(\{a\}\) | \(\{a\}\) |
+| \(E_1 + E_2\) | \(Null(E_1) \cup Null(E_2)\) | \(First(E_1) \cup First(E_2)\) | \(Last(E_1) \cup Last(E_2)\) |
+| \(E_1 \cdot E_2\) | \(Null(E_1) \cap Null(E_2)\) | \(First(E_1) \cup Null(F) \cdot First(G)\) | \(Last(E_2) \cup Null(E_2) \cdot Last(E_1)\) |
+| \(E^*\) | \(\{\epsilon\}\) | \(First(E)\) | \(Last(E)\) |
+
+Pour fonction \(Follow(E)\) :
+- \(Follow(\emptyset, x) = \emptyset\)
+- \(Follow(\epsilon, x) = \emptyset\)
+- \(Follow(a, x) = \emptyset\)
+- \(Follow(E_1 + E_2, x) = Follow(E_1, x) \cup Follow(E_2, x)\)
+- \(Follow(E_1 \cdot E_2, x) = \begin{cases} Follow(E_1, x) \cup First(E_2) & \text{si } x \in Last(E_1) \\ Follow(E_1, x) & \text{sinon} \end{cases} \cup \begin{cases} Follow(E_2, x) & \text{si } x \notin First(E_2) \\ \emptyset & \text{sinon} \end{cases}\)
+- \(Follow(E^*, x) = \begin{cases} Follow(E, x) \cup First(E) & \text{si } x \in Last(E) \\ Follow(E, x) & \text{sinon} \end{cases}\)
+
+---
 
 ## Algorithme de déterminisation
 

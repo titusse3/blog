@@ -137,7 +137,7 @@
     <h1 class="post-title entry-hint-parent">
       Algorithme sur les automates et langages
     </h1>
-    <div class="post-meta"><span title='2025-11-10 00:00:00 +0000 UTC'>November 10, 2025</span>&nbsp;·&nbsp;<span>2 min</span>
+    <div class="post-meta"><span title='2025-11-10 00:00:00 +0000 UTC'>November 10, 2025</span>&nbsp;·&nbsp;<span>3 min</span>
 
 </div>
   </header> <div class="toc">
@@ -170,6 +170,7 @@
 </div>
 
   <div class="post-content"><p>Présentation des principaux algorithmes utilisés en théorie des langages ainsi qu&rsquo;en théorie des automates.</p>
+<hr>
 <h2 id="calcule-des-résiduels">Calcule des résiduels<a hidden class="anchor" aria-hidden="true" href="#calcule-des-résiduels">#</a></h2>
 <p>Soit \(L\) un langage <em>Rationnel</em> sur un alphabet \(\Sigma\), donner par une expression rationnelle \(E\) tel que \(L = L(E)\).</p>
 <figure
@@ -270,7 +271,68 @@ L&rsquo;algorithme suit les étapes suivantes :</p>
 <p><img alt="Gif d&rsquo;exemple de Standardisation" loading="lazy" src="https://i.imgur.com/n18oPqK.gif"></p>
 <hr>
 <h2 id="algorithme-démondage">Algorithme d&rsquo;émondage<a hidden class="anchor" aria-hidden="true" href="#algorithme-démondage">#</a></h2>
+<hr>
 <h2 id="lalgorithme-de-glushkov">L&rsquo;algorithme de Glushkov<a hidden class="anchor" aria-hidden="true" href="#lalgorithme-de-glushkov">#</a></h2>
+<p>Soit \(E\) une expression rationnelle sur un alphabet \(\Sigma\).</p>
+<p>L&rsquo;algorithme de <strong>Glushkov</strong> construit un automate fini non déterministe </p>
+\[A = (\Sigma, Q, I, F, \delta) \text{ tel que } L(A) = L(E)\]<table>
+  <thead>
+      <tr>
+          <th>Expression \(E\)</th>
+          <th style="text-align: center">\(Null(E)\)</th>
+          <th style="text-align: center">\(First(E)\)</th>
+          <th style="text-align: center">\(Last(E)\)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>\(\emptyset\)</td>
+          <td style="text-align: center">\(\varnothing\)</td>
+          <td style="text-align: center">\(\varnothing\)</td>
+          <td style="text-align: center">\(\varnothing\)</td>
+      </tr>
+      <tr>
+          <td>\(\epsilon\)</td>
+          <td style="text-align: center">\(\{\epsilon\}\)</td>
+          <td style="text-align: center">\(\varnothing\)</td>
+          <td style="text-align: center">\(\varnothing\)</td>
+      </tr>
+      <tr>
+          <td>\(a \in \Sigma\)</td>
+          <td style="text-align: center">\(\varnothing\)</td>
+          <td style="text-align: center">\(\{a\}\)</td>
+          <td style="text-align: center">\(\{a\}\)</td>
+      </tr>
+      <tr>
+          <td>\(E_1 + E_2\)</td>
+          <td style="text-align: center">\(Null(E_1) \cup Null(E_2)\)</td>
+          <td style="text-align: center">\(First(E_1) \cup First(E_2)\)</td>
+          <td style="text-align: center">\(Last(E_1) \cup Last(E_2)\)</td>
+      </tr>
+      <tr>
+          <td>\(E_1 \cdot E_2\)</td>
+          <td style="text-align: center">\(Null(E_1) \cap Null(E_2)\)</td>
+          <td style="text-align: center">\(First(E_1) \cup Null(F) \cdot First(G)\)</td>
+          <td style="text-align: center">\(Last(E_2) \cup Null(E_2) \cdot Last(E_1)\)</td>
+      </tr>
+      <tr>
+          <td>\(E^*\)</td>
+          <td style="text-align: center">\(\{\epsilon\}\)</td>
+          <td style="text-align: center">\(First(E)\)</td>
+          <td style="text-align: center">\(Last(E)\)</td>
+      </tr>
+  </tbody>
+</table>
+<p>Pour fonction \(Follow(E)\) :</p>
+<ul>
+<li>\(Follow(\emptyset, x) = \emptyset\)</li>
+<li>\(Follow(\epsilon, x) = \emptyset\)</li>
+<li>\(Follow(a, x) = \emptyset\)</li>
+<li>\(Follow(E_1 + E_2, x) = Follow(E_1, x) \cup Follow(E_2, x)\)</li>
+<li>\(Follow(E_1 \cdot E_2, x) = \begin{cases} Follow(E_1, x) \cup First(E_2) & \text{si } x \in Last(E_1) \\ Follow(E_1, x) & \text{sinon} \end{cases} \cup \begin{cases} Follow(E_2, x) & \text{si } x \notin First(E_2) \\ \emptyset & \text{sinon} \end{cases}\)</li>
+<li>\(Follow(E^*, x) = \begin{cases} Follow(E, x) \cup First(E) & \text{si } x \in Last(E) \\ Follow(E, x) & \text{sinon} \end{cases}\)</li>
+</ul>
+<hr>
 <h2 id="algorithme-de-déterminisation">Algorithme de déterminisation<a hidden class="anchor" aria-hidden="true" href="#algorithme-de-déterminisation">#</a></h2>
 <h2 id="algorithme-de-minimisation">Algorithme de minimisation<a hidden class="anchor" aria-hidden="true" href="#algorithme-de-minimisation">#</a></h2>
 
