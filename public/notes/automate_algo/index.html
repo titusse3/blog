@@ -275,7 +275,7 @@ L&rsquo;algorithme suit les étapes suivantes :</p>
 <h2 id="lalgorithme-de-glushkov">L&rsquo;algorithme de Glushkov<a hidden class="anchor" aria-hidden="true" href="#lalgorithme-de-glushkov">#</a></h2>
 <p>Soit \(E\) une expression rationnelle sur un alphabet \(\Sigma\).</p>
 <p>L&rsquo;algorithme de <strong>Glushkov</strong> construit un automate fini non déterministe </p>
-\[A = (\Sigma, Q, I, F, \delta) \text{ tel que } L(A) = L(E)\]<table>
+\[A = (\Sigma, Q, \{0\}, F, \delta) \text{ tel que } L(A) = L(E)\]<table>
   <thead>
       <tr>
           <th>Expression \(E\)</th>
@@ -332,8 +332,30 @@ L&rsquo;algorithme suit les étapes suivantes :</p>
 <li>\(Follow(E_1 \cdot E_2, x) = \begin{cases} Follow(E_1, x) \cup First(E_2) & \text{si } x \in Last(E_1) \\ Follow(E_1, x) & \text{sinon} \end{cases} \cup \begin{cases} Follow(E_2, x) & \text{si } x \notin First(E_2) \\ \emptyset & \text{sinon} \end{cases}\)</li>
 <li>\(Follow(E^*, x) = \begin{cases} Follow(E, x) \cup First(E) & \text{si } x \in Last(E) \\ Follow(E, x) & \text{sinon} \end{cases}\)</li>
 </ul>
-<hr>
+<p>\(\delta\) est défini par :
+</p>
+\[\delta = \{(p, a, q) | p \in Q, q \in Follow(E, p) \text{ et } p \text{ étiqueté par } a\}\]<p>
+L&rsquo;ensemble des états finaux \(F\) est défini par :
+</p>
+\[F = \begin{cases} Last(E) \cup \{\epsilon\} & \text{si } \epsilon \in L(E) \\ Last(E) & \text{sinon} \end{cases}\]<hr>
 <h2 id="algorithme-de-déterminisation">Algorithme de déterminisation<a hidden class="anchor" aria-hidden="true" href="#algorithme-de-déterminisation">#</a></h2>
+<p>Soit \(A = (\Sigma, Q, I, F, \delta)\) un automate fini non déterministe.
+L&rsquo;algorithme de <strong>déterminisation</strong> transforme \(A\) en un automate fini déterministe
+</p>
+\[A' = (\Sigma, Q', \{I\}, F', \delta')\]<p>L&rsquo;algorithme suit les étapes suivantes :</p>
+<ol>
+<li>\(Q' = \mathcal{P}(Q)\) (l&rsquo;ensemble des parties de \(Q\)),</li>
+<li>\(F' = \{S \subseteq Q \mid S \cap F \neq \emptyset\}\),</li>
+<li>Pour chaque \(S \in Q'\) et chaque \(a \in \Sigma\), définir \(\delta'(S, a) = \bigcup_{q \in S} \delta(q, a)\).</li>
+</ol>
+<p>La méthode d&rsquo;application est la suivante :</p>
+<ol>
+<li>Regroupement des états initiaux en un seul état initial.</li>
+<li>On part de cette état initial et on calcule les transitions pour chaque symbole de l&rsquo;alphabet.</li>
+<li>On répète l&rsquo;opération pour chaque nouvel état créé jusqu&rsquo;à ce qu&rsquo;aucun nouvel état ne puisse être créé.</li>
+</ol>
+<p><img alt="Gif d&rsquo;exemple de Déterminisation" loading="lazy" src="https://i.imgur.com/jJN7EqJ.gif"></p>
+<hr>
 <h2 id="algorithme-de-minimisation">Algorithme de minimisation<a hidden class="anchor" aria-hidden="true" href="#algorithme-de-minimisation">#</a></h2>
 
   </div>

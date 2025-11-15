@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Obelisk on renauxv</title>
+    <link>http://localhost:1313/categories/obelisk/</link>
+    <description>Recent content in Obelisk on renauxv</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>fr-FR</language>
+    <copyright>Renaux Verdiere Theo</copyright>
+    <lastBuildDate>Tue, 14 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/obelisk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fonctionnal Reactive Programming (FRP)</title>
+      <link>http://localhost:1313/notes/frp/</link>
+      <pubDate>Tue, 14 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/frp/</guid>
+      <description>&lt;p&gt;Aillant fais quelques projets en Haskell, j&amp;rsquo;ai eu l&amp;rsquo;opportunité de travailler sur la mise en place d&amp;rsquo;un site web aillant pour thechnologie de base le &lt;strong&gt;FRP&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Il s&amp;rsquo;agit d&amp;rsquo;un paradigme de programmation fonctionnelle permettant de gérer des systèmes réactifs et interactifs. Il est souvent utilisé pour mettre en place des interfaces graphiques, cependant, il s&amp;rsquo;agit d&amp;rsquo;une approche qui peut être généralisée.&lt;/p&gt;
+&lt;h2 id=&#34;techno-disponible&#34;&gt;Techno disponible&lt;/h2&gt;
+&lt;p&gt;Dans le cadre du développement web, la bibliothèque la plus utiliser est &lt;strong&gt;Reflex&lt;/strong&gt;. Il s&amp;rsquo;agit d&amp;rsquo;une bibliothèque &lt;strong&gt;FRP&lt;/strong&gt; dédiée au Frontend.
+Il est possible de transpiler le code &lt;strong&gt;Haskell&lt;/strong&gt; en &lt;strong&gt;JavaScript&lt;/strong&gt; via &lt;strong&gt;GHCJS&lt;/strong&gt;.
+Cependant, il existe un framework complet nommé &lt;strong&gt;Obelisk&lt;/strong&gt; qui permet de gérer la partie Frontend et Backend en &lt;strong&gt;Haskell&lt;/strong&gt; en une seul codebase.
+Ces deux choix on leur avantages et inconvénients :&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

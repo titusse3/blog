@@ -7,21 +7,14 @@
     <generator>Hugo -- 0.152.2</generator>
     <language>fr-FR</language>
     <copyright>Renaux Verdiere Theo</copyright>
+    <lastBuildDate>Mon, 10 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/th%C3%A9orerie-des-automates/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Algorithme sur les automates et langages</title>
       <link>http://localhost:1313/notes/automate_algo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/notes/automate_algo/</guid>
-      <description>&lt;h1 id=&#34;calcule-des-résiduels&#34;&gt;Calcule des résiduels&lt;/h1&gt;
-&lt;p&gt;Soit \(L\)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Glushkov&lt;/li&gt;
-&lt;li&gt;Determinisation&lt;/li&gt;
-&lt;li&gt;Minimisaton&lt;/li&gt;
-&lt;li&gt;Standardisation&lt;/li&gt;
-&lt;li&gt;émondage&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;Présentation des principaux algorithmes utilisés en théorie des langages ainsi qu&amp;rsquo;en théorie des automates.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

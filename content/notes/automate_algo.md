@@ -66,7 +66,7 @@ L'algorithme suit les étapes suivantes :
 
 Soit \(E\) une expression rationnelle sur un alphabet \(\Sigma\). 
 
-L'algorithme de **Glushkov** construit un automate fini non déterministe \[A = (\Sigma, Q, I, F, \delta) \text{ tel que } L(A) = L(E)\]
+L'algorithme de **Glushkov** construit un automate fini non déterministe \[A = (\Sigma, Q, \{0\}, F, \delta) \text{ tel que } L(A) = L(E)\]
 
 | Expression \(E\) | \(Null(E)\) | \(First(E)\) | \(Last(E)\) |
 |---|:---:|:---:|:---:|
@@ -85,8 +85,32 @@ Pour fonction \(Follow(E)\) :
 - \(Follow(E_1 \cdot E_2, x) = \begin{cases} Follow(E_1, x) \cup First(E_2) & \text{si } x \in Last(E_1) \\ Follow(E_1, x) & \text{sinon} \end{cases} \cup \begin{cases} Follow(E_2, x) & \text{si } x \notin First(E_2) \\ \emptyset & \text{sinon} \end{cases}\)
 - \(Follow(E^*, x) = \begin{cases} Follow(E, x) \cup First(E) & \text{si } x \in Last(E) \\ Follow(E, x) & \text{sinon} \end{cases}\)
 
+\(\delta\) est défini par :
+\[\delta = \{(p, a, q) | p \in Q, q \in Follow(E, p) \text{ et } p \text{ étiqueté par } a\}\]
+L'ensemble des états finaux \(F\) est défini par :
+\[F = \begin{cases} Last(E) \cup \{\epsilon\} & \text{si } \epsilon \in L(E) \\ Last(E) & \text{sinon} \end{cases}\]
+
 ---
 
 ## Algorithme de déterminisation
+
+Soit \(A = (\Sigma, Q, I, F, \delta)\) un automate fini non déterministe.
+L'algorithme de **déterminisation** transforme \(A\) en un automate fini déterministe
+\[A' = (\Sigma, Q', \{I\}, F', \delta')\]
+
+L'algorithme suit les étapes suivantes :
+1. \(Q' = \mathcal{P}(Q)\) (l'ensemble des parties de \(Q\)),
+2. \(F' = \{S \subseteq Q \mid S \cap F \neq \emptyset\}\),
+3. Pour chaque \(S \in Q'\) et chaque \(a \in \Sigma\), définir \(\delta'(S, a) = \bigcup_{q \in S} \delta(q, a)\).
+
+La méthode d'application est la suivante :
+
+1. Regroupement des états initiaux en un seul état initial.
+2. On part de cette état initial et on calcule les transitions pour chaque symbole de l'alphabet.
+3. On répète l'opération pour chaque nouvel état créé jusqu'à ce qu'aucun nouvel état ne puisse être créé.
+
+![Gif d'exemple de Déterminisation](https://i.imgur.com/jJN7EqJ.gif)
+
+---
 
 ## Algorithme de minimisation
