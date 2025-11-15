@@ -7,8 +7,16 @@
     <generator>Hugo -- 0.152.2</generator>
     <language>fr-FR</language>
     <copyright>Renaux Verdiere Theo</copyright>
-    <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/cryptographie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TOTP protocole</title>
+      <link>http://localhost:1313/notes/otp/</link>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/otp/</guid>
+      <description>&lt;p&gt;Le protocle &lt;strong&gt;TOTP&lt;/strong&gt; (Time-based One-Time Password) est devenu une option générique pour la &lt;strong&gt;2FA&lt;/strong&gt; sur pratiquement toutes les plateformes métant cette double authentification en place.&lt;/p&gt;
+&lt;p&gt;Cette note à pour but de présenter le fonctionnement de ce protocole.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>LFSR pratique</title>
       <link>http://localhost:1313/notes/lfsr/</link>

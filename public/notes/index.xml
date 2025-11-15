@@ -7,8 +7,16 @@
     <generator>Hugo -- 0.152.2</generator>
     <language>fr-FR</language>
     <copyright>Renaux Verdiere Theo</copyright>
-    <lastBuildDate>Mon, 10 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TOTP protocole</title>
+      <link>http://localhost:1313/notes/totp/</link>
+      <pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/totp/</guid>
+      <description>&lt;p&gt;Le protocle &lt;strong&gt;TOTP&lt;/strong&gt; (Time-based One-Time Password) est devenu une option générique pour la &lt;strong&gt;2FA&lt;/strong&gt; sur pratiquement toutes les plateformes métant cette double authentification en place.&lt;/p&gt;
+&lt;p&gt;Cette note à pour but de présenter le fonctionnement de ce protocole.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Algorithme sur les automates et langages</title>
       <link>http://localhost:1313/notes/automate_algo/</link>

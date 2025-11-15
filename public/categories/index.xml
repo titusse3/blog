@@ -7,8 +7,15 @@
     <generator>Hugo -- 0.152.2</generator>
     <language>fr-FR</language>
     <copyright>Renaux Verdiere Theo</copyright>
-    <lastBuildDate>Tue, 14 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cryptographie</title>
+      <link>http://localhost:1313/categories/cryptographie/</link>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/cryptographie/</guid>
+      <description></description>
+    </item>
     <item>
       <title>FRP</title>
       <link>http://localhost:1313/categories/frp/</link>
@@ -56,13 +63,6 @@
       <link>http://localhost:1313/categories/calcule-formelle/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/calcule-formelle/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cryptographie</title>
-      <link>http://localhost:1313/categories/cryptographie/</link>
-      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/cryptographie/</guid>
       <description></description>
     </item>
     <item>

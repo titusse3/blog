@@ -114,3 +114,7 @@ La méthode d'application est la suivante :
 ---
 
 ## Algorithme de minimisation
+
+
+
+---

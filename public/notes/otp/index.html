@@ -5,11 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Notes | renauxv</title>
+<title>TOTP protocole | renauxv</title>
 <meta name="keywords" content="">
-<meta name="description" content="Notes - renauxv">
+<meta name="description" content="Le protocle TOTP (Time-based One-Time Password) est devenu une option générique pour la 2FA sur pratiquement toutes les plateformes métant cette double authentification en place.
+Cette note à pour but de présenter le fonctionnement de ce protocole.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/notes/">
+<link rel="canonical" href="http://localhost:1313/notes/otp/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.18ec9370c9d7a17534cdedfe8086482e793908e3349601b4f54dbc3fb9f15ba5.css" integrity="sha256-GOyTcMnXoXU0ze3&#43;gIZILnk5COM0lgG09U28P7nxW6U=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/assets/favicon.ico">
@@ -18,8 +19,7 @@
 <link rel="mask-icon" href="http://localhost:1313/assets/favicon.ico">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/notes/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/notes/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/notes/otp/">
 <noscript>
     <style>
         #theme-toggle,
@@ -73,7 +73,7 @@
 
 </script>
 </head>
-<body class="list" id="top">
+<body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
@@ -109,7 +109,7 @@
             </li>
             <li>
                 <a href="http://localhost:1313/notes" title="Notes">
-                    <span class="active">Notes</span>
+                    <span>Notes</span>
                 </a>
             </li>
             <li>
@@ -125,103 +125,77 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a></div>
-  <h1>
-    Notes
-  </h1>
-</header>
+<main class="main">
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TOTP protocole
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Le protocle TOTP (Time-based One-Time Password) est devenu une option générique pour la 2FA sur pratiquement toutes les plateformes métant cette double authentification en place.
-Cette note à pour but de présenter le fonctionnement de ce protocole.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-15 00:00:00 +0000 UTC'>November 15, 2025</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to TOTP protocole" href="http://localhost:1313/notes/totp/"></a>
-</article>
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/notes/">Notes</a></div>
+    <h1 class="post-title entry-hint-parent">
+      TOTP protocole
+    </h1>
+    <div class="post-meta"><span title='2025-11-15 00:00:00 +0000 UTC'>November 15, 2025</span>&nbsp;·&nbsp;<span>2 min</span>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Algorithme sur les automates et langages
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Présentation des principaux algorithmes utilisés en théorie des langages ainsi qu’en théorie des automates.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-10 00:00:00 +0000 UTC'>November 10, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
-  <a class="entry-link" aria-label="post link to Algorithme sur les automates et langages" href="http://localhost:1313/notes/automate_algo/"></a>
-</article>
+</div>
+  </header> 
+  <div class="post-content"><p>Le protocle <strong>TOTP</strong> (Time-based One-Time Password) est devenu une option générique pour la <strong>2FA</strong> sur pratiquement toutes les plateformes métant cette double authentification en place.</p>
+<p>Cette note à pour but de présenter le fonctionnement de ce protocole.</p>
+<figure
+  role="note"
+  id="admonition-00"
+  aria-labelledby="admonition-caption-00"
+  class="admonition note  not-prose"
+>
+  <div class="flex items-center space-x-2 pb-2 font-semibold">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      class="lucide lucide-info"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 16v-4M12 8h.01" />
+    </svg>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Fonctionnal Reactive Programming (FRP)
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Aillant fais quelques projets en Haskell, j’ai eu l’opportunité de travailler sur la mise en place d’un site web aillant pour thechnologie de base le FRP.
-Il s’agit d’un paradigme de programmation fonctionnelle permettant de gérer des systèmes réactifs et interactifs. Il est souvent utilisé pour mettre en place des interfaces graphiques, cependant, il s’agit d’une approche qui peut être généralisée.
-Techno disponible Dans le cadre du développement web, la bibliothèque la plus utiliser est Reflex. Il s’agit d’une bibliothèque FRP dédiée au Frontend. Il est possible de transpiler le code Haskell en JavaScript via GHCJS. Cependant, il existe un framework complet nommé Obelisk qui permet de gérer la partie Frontend et Backend en Haskell en une seul codebase. Ces deux choix on leur avantages et inconvénients :
-...</p>
+    <figcaption id="admonition-caption-00">
+        Note
+    </figcaption>
   </div>
-  <footer class="entry-footer"><span title='2025-10-14 00:00:00 +0000 UTC'>October 14, 2025</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Fonctionnal Reactive Programming (FRP)" href="http://localhost:1313/notes/frp/"></a>
-</article>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">LFSR pratique
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Cette note offre une brève introduction aux LFSR. Je me concentrerai sur les éléments essentiels pour en saisir le principe, sans entrer dans l’ensemble des détails théoriques.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-04-07 00:00:00 +0000 UTC'>April 7, 2025</span>&nbsp;·&nbsp;<span>9 min</span></footer>
-  <a class="entry-link" aria-label="post link to LFSR pratique" href="http://localhost:1313/notes/lfsr/"></a>
-</article>
+  <div class="prose pl-8 text-inherit marker:text-inherit">
+    <p>Bien que <strong>OTP</strong>, One-Time Password et One-Time Pad soient des acronymes similaires, ils ne désignent pas la même chose. Le One-Time Pad, aussi appeler chiffrement de Vernam est un protocole de chiffrement.</p>
+<p>La où le One-Time Password est un protocole d&rsquo;authentification. Il ne faut donc pas confondre les deux.</p>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Développement de série à la main
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-05 00:00:00 +0000 UTC'>March 5, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
-  <a class="entry-link" aria-label="post link to Développement de série à la main" href="http://localhost:1313/notes/devellopement_serie/"></a>
-</article>
+</figure>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mesure Quantique
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-01 00:00:00 +0000 UTC'>March 1, 2025</span>&nbsp;·&nbsp;<span>3 min</span></footer>
-  <a class="entry-link" aria-label="post link to Mesure Quantique" href="http://localhost:1313/notes/mesure_quantique/"></a>
-</article>
+<h1 id="principe">Principe<a hidden class="anchor" aria-hidden="true" href="#principe">#</a></h1>
+<p>Le protocole <strong>TOTP</strong> à pour but de mettre en place un mots de passe à usage valable seulement pendant une courte période de temps. Ce mot de passe est généré à partir de l&rsquo;heure ainsi qu&rsquo;une clé secrète partagée entre le client et le service surlequel l&rsquo;utilisateur souhaite s&rsquo;authentifier.</p>
+<p>Le &lsquo;sous-mot de passe&rsquo; est généré par un appareil (souvent une application mobile), de ce faite, la clé secrète est stockée sur cet appareil.</p>
+<p>Les applications les plus utilisées sont les suivantes :</p>
+<ul>
+<li>Google Authenticator (Propriétaire)</li>
+<li>Aegis Authenticator (Open Source et libre)</li>
+<li>FreeOTP (Open Source et libre)</li>
+</ul>
+<h1 id="sécurité">Sécurité<a hidden class="anchor" aria-hidden="true" href="#sécurité">#</a></h1>
+<p>Comme dis précédement, l&rsquo;utilisateur détient une clé secrète partagée avec le service. De cette façon, le service peut donc vérifier que le &lsquo;sous-mot de passe&rsquo; généré par l&rsquo;utilisateur est bien valide.</p>
+<p>Ce qui est très intéressant avec ce protocole, c&rsquo;est que la clé secrète n&rsquo;est jamais transmise lors de l&rsquo;authentification. Seul le mot de passe à usage unique est transmis. Or, si ce mot de passe est intercepté, il ne sera plus valide après un court laps de temps (généralement 30 secondes).</p>
+<p>Ce qu&rsquo;il faut donc comprendre et que la manière dont la clé secrète est protégée
+que ce soit sur le service ou sur l&rsquo;appareil de l&rsquo;utilisateur est cruciale pour la sécurité du protocole.</p>
+<p><img alt="Schéma du protocole TOTP" loading="lazy" src="https://i.imgur.com/pb7pz5H.gif"></p>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Memo de commande linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Mémo de commande très pratique.
-...</p>
   </div>
-  <footer class="entry-footer"><span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to Memo de commande linux" href="http://localhost:1313/notes/commande/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+  </footer>
 </article>
     </main>
     
@@ -299,6 +273,53 @@ Techno disponible Dans le cadre du développement web, la bibliothèque la plus 
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
