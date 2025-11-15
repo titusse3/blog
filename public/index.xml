@@ -18,13 +18,6 @@
 &lt;p&gt;Cette note à pour but de présenter le fonctionnement de ce protocole.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Algorithme sur les automates et langages</title>
-      <link>http://localhost:1313/notes/automate_algo/</link>
-      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/automate_algo/</guid>
-      <description>&lt;p&gt;Présentation des principaux algorithmes utilisés en théorie des langages ainsi qu&amp;rsquo;en théorie des automates.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Extraction d&#39;information sur image (Chest-Reco)</title>
       <link>http://localhost:1313/posts/chest_recognition/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
@@ -35,19 +28,6 @@ Cet article présente la mise en place d’un système d’&lt;strong&gt;extract
 &lt;h2 id=&#34;objectif-du-projet&#34;&gt;Objectif du projet&lt;/h2&gt;
 &lt;p&gt;L’objectif est d’automatiser l’analyse visuelle des coffres à l’aide d’un&lt;br&gt;
 script &lt;em&gt;Python&lt;/em&gt;. Ce projet met en œuvre des techniques de &lt;strong&gt;traitement   d’image&lt;/strong&gt; et d’&lt;strong&gt;extraction de texte&lt;/strong&gt;, tout en gardant à l’esprit la  nécessité de concevoir une solution légère et peu consommatrice en ressources.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Fonctionnal Reactive Programming (FRP)</title>
-      <link>http://localhost:1313/notes/frp/</link>
-      <pubDate>Tue, 14 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/frp/</guid>
-      <description>&lt;p&gt;Aillant fais quelques projets en Haskell, j&amp;rsquo;ai eu l&amp;rsquo;opportunité de travailler sur la mise en place d&amp;rsquo;un site web aillant pour thechnologie de base le &lt;strong&gt;FRP&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Il s&amp;rsquo;agit d&amp;rsquo;un paradigme de programmation fonctionnelle permettant de gérer des systèmes réactifs et interactifs. Il est souvent utilisé pour mettre en place des interfaces graphiques, cependant, il s&amp;rsquo;agit d&amp;rsquo;une approche qui peut être généralisée.&lt;/p&gt;
-&lt;h2 id=&#34;techno-disponible&#34;&gt;Techno disponible&lt;/h2&gt;
-&lt;p&gt;Dans le cadre du développement web, la bibliothèque la plus utiliser est &lt;strong&gt;Reflex&lt;/strong&gt;. Il s&amp;rsquo;agit d&amp;rsquo;une bibliothèque &lt;strong&gt;FRP&lt;/strong&gt; dédiée au Frontend.
-Il est possible de transpiler le code &lt;strong&gt;Haskell&lt;/strong&gt; en &lt;strong&gt;JavaScript&lt;/strong&gt; via &lt;strong&gt;GHCJS&lt;/strong&gt;.
-Cependant, il existe un framework complet nommé &lt;strong&gt;Obelisk&lt;/strong&gt; qui permet de gérer la partie Frontend et Backend en &lt;strong&gt;Haskell&lt;/strong&gt; en une seul codebase.
-Ces deux choix on leur avantages et inconvénients :&lt;/p&gt;</description>
     </item>
     <item>
       <title>Génération Augmentée de récupération (RAG)</title>
