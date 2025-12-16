@@ -2,6 +2,7 @@
 title: TOTP protocole
 date: "2025-11-15"
 categories: [Cryptographie]
+draft: true
 ---
 
 Le protocle **TOTP** (Time-based One-Time Password) est devenu une option générique pour la **2FA** sur pratiquement toutes les plateformes métant cette double authentification en place. 
