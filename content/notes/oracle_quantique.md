@@ -88,4 +88,45 @@ On obtient alors l'oracle quantique suivant :
 
 Le second type d'oracle quantique utilise le concept de **_phase kickback_**. Qui permet de modifier la phase d'une fonction d'onde en fonction de l'état d'un qubit.
 
+Ce que l'on entend par là, c'est modifier le signe de la fonction d'onde. Ce qui donnerai l'oracle quantique suivant :
+
+\[
+  \begin{equation}
+    U_f \lvert w \rangle =  
+      \begin{cases} 
+      -\lvert w \rangle & \text{si } w = 1011 \\
+      \lvert w \rangle & \text{si } w \in \{0, 1\}^4 \setminus \{1011\}
+      \end{cases}
+  \end{equation}
+\]
+
+Si l'oracle est du type de reconnaissance d'un mot alors il sera de la forme :
+
+\[
+  U_f = I - 2 \lvert w \rangle \langle w \rvert
+\]
+
 # Calcule d'oracle quantique
+
+On va maintenant voir comment l'on peut construire des circuits quantiques capables de réaliser le fonctionnement d'un oracle quantique.
+
+On rapelle que notre oracle suit la logique de \(f\) qui permet de reconnaitre le mot binaire \(1011\).
+
+## Oracle avec bit ancillaire
+
+On souhaite donc contruire l'opérateur unitaire suivant :
+
+\[
+  \begin{equation}
+    U_f \lvert 0 w \rangle =  
+      \begin{cases} 
+      \lvert 1 w \rangle & \text{si } w = 1011 \\
+      \lvert 0 w \rangle & \text{si } w \in \{0, 1\}^4 \setminus \{1011\}
+      \end{cases}
+  \end{equation}
+\]
+
+
+
+## Oracle avec _phase kickback_
+
