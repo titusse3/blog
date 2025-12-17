@@ -47,16 +47,45 @@ Cependant, avec notre représentation d'oracle, par une fonction unitaire, il es
 {{< admonition >}}
 Une fonction d'onde quantique, peut être vue comme un "ensemble" de mots binaires. Par exemple, si on prend la fonction d'onde suivante :
 \[
-  \phi = \frac{1}{\sqrt{2}}(\lvert 110 \rangle + \lvert 100 \rangle)
+  \psi = \frac{1}{\sqrt{2}}(\lvert 110 \rangle + \lvert 100 \rangle)
 \]
 
 Peut être vue comme l'ensemble des mots binaires \{110, 100\}. Avec le bit de poids faible à droite. Ce qui nous donne l'ensemble \{6, 4\} en décimal.
 {{< /admonition >}}
 
-C'est la que deux types d'oracles quantiques apparaissent.
+C'est la que deux types d'oracles quantiques apparaissent. Pour simplifier les choses, on suppose que notre oracle dans le "monde classique" nous renverai la 
+chose suivante :
 
-## 
+\[
+  \begin{equation}
+    f(w) = 
+      \begin{cases} 
+      1 & \text{si } w = 1011 \\
+      0 & \text{si } w \in \{0, 1\}^4 \setminus \{1011\}
+      \end{cases}
+  \end{equation}
+\]
 
-## 
+## Bit ancillaire
+
+Le premier type d'oracle quantique utilise un **bit ancillaire**. C'est à dire un qubit supplémentaire qui va permettre de stocker le résultat de l'oracle.
+
+De ce faite, la fonction d'onde est alors dans l'espace de *Hilbert* de dimension \(2^{n+1}\) avec \(n\) le nombre de qubits d'entrée. Dans notre exemple, on obtient donc une fonction d'onde \(\psi \in \mathcal{H}^{5}\). Où le dernier qubit est le bit ancillaire.
+
+On obtient alors l'oracle quantique suivant :
+
+\[
+  \begin{equation}
+    U_f \lvert 0 w \rangle =  
+      \begin{cases} 
+      \lvert 1 w \rangle & \text{si } w = 1011 \\
+      \lvert 0 w \rangle & \text{si } w \in \{0, 1\}^4 \setminus \{1011\}
+      \end{cases}
+  \end{equation}
+\]
+
+## _Phase Kickback_
+
+Le second type d'oracle quantique utilise le concept de **_phase kickback_**. Qui permet de modifier la phase d'une fonction d'onde en fonction de l'état d'un qubit.
 
 # Calcule d'oracle quantique

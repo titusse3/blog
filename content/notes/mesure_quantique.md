@@ -1,7 +1,7 @@
 ---
 title: Mesure Quantique
+tags: [Informatique Quantique]
 date: "2025-03-01"
-categories: [Informatique Quantique, mesure]
 math: true
 ---
 
