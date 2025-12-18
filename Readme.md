@@ -79,3 +79,8 @@ Permet d'ajouter un lien vers un autre article.
 ```
 {{< sidenote "¹" >}}Voici le contenu de ma note qui s'affichera sur le côté.{{< /sidenote >}}
 ```
+
+## Deploiment
+
+Le site est déployé automatiquement à l'aide de `Jenkinsfile` à l'aide de la 
+pipeline présente dans le dossier `.deployment`.

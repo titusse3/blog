@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        pollSCM 'H/2 * * * *'
+    }
+
     environment {
         IMAGE_NAME = "hugo-blog-prod"
         CONTAINER_NAME = "hugo-site-prod"
