@@ -25,7 +25,7 @@ pipeline {
             steps {
                 echo "Déploiement du site"
                 sh "docker run -d --name ${CONTAINER_NAME} -p 8081:80 ${IMAGE_NAME}"
-                echo "Site déployé sur http://localhost:8081"
+                echo "Site déployé sur http://localhost:8000"
             }
         }
     }
