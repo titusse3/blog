@@ -18,14 +18,14 @@ pipeline {
         stage('Build Image') {
             steps {
                 echo "Build de l'image Docker"
-                sh "docker build -t ./.deployment/${IMAGE_NAME} ."
+                sh "docker build -t ${IMAGE_NAME} -f .deployment/Dockerfile ."
             }
         }
 
         stage('Deploy') {
             steps {
                 echo "Déploiement du site"
-                sh "docker run -d --name ./.deployment/${CONTAINER_NAME} -p ${PORT}:80 ${IMAGE_NAME}"
+                sh "docker run -d --name ${CONTAINER_NAME} -p ${PORT}:80 ${IMAGE_NAME}"
                 echo "Site déployé sur http://localhost:${PORT}"
             }
         }
