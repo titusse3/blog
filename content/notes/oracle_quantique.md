@@ -120,7 +120,8 @@ Le choix d'utiliser l'un ou l'autre dépend souvent du contexte de l'algorithme 
 
 On va maintenant voir comment construire des circuits quantiques capables de réaliser le fonctionnement d'un oracle quantique.
 
-On rapelle que notre oracle suit la logique de \(f\) qui permet de reconnaitre le mot binaire \(1011\).
+Nous allons voir comment construire les deux types d'oracles pour le problème suivant :
+> Soit un mot binaire de 4 bits \(w \in \{0, 1\}^4\). Construire un oracle quantique qui reconnaît le mot \(1011\).
 
 ## Oracle avec bit ancillaire
 
